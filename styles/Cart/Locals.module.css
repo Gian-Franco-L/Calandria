@@ -1,0 +1,40 @@
+.locals{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding-left: 3%;
+  padding-right: 2%;
+}
+
+.storeAndTittle{
+  display: flex;
+}
+.storeAndTittle p{
+  padding-left: 2%;
+}
+
+.storeIcon{
+  height: 20px;
+  width: 20px;
+}
+
+.location{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  margin-top: 2%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  background-color: white;
+}
+.location:focus{
+  border: 1px solid rgb(50, 50, 150);
+}
+.location p{
+  margin-left: 6%;
+}
+.location h3{
+  margin-right: 6%;
+}

@@ -1,0 +1,22 @@
+.mainContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.loaderContainer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 370px;
+  width: 190px;
+  margin-right: 1%;
+  margin-bottom: 40px;
+}
+
+@media (width <= 630px){
+  .mainContainer{
+    justify-content: center;
+  }
+}

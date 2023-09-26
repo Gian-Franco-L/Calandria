@@ -1,0 +1,95 @@
+.mainContainer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 200px;
+}
+
+.homeAndFilters{
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  width: 80.5%;
+  margin-right: 20px;
+}
+
+.homeLink{
+  display: flex;
+}
+.homeLink p{
+  font-size: 1rem;
+}
+.homeLink a{
+  color: rgb(79, 79, 79);
+  text-decoration: none;
+}
+.homeLink a:hover{
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+
+.homeMobile{
+  display: none;
+}
+
+.categoriesAndFilersMobile{
+  display: none;
+  width: 90%;
+  margin-bottom: 30px;
+}
+.categoriesAndFilersMobile article{
+  width: 30%;
+}
+.categoriesAndFilersMobile select{
+  height: 25px;
+  border: 1px solid black;
+}
+
+
+.categoriesAndItems{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4%;
+}
+
+.categories{
+  display: flex;
+  flex-direction: column;
+}
+.categories a{
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+}
+.categories a:hover{
+  color: rgb(92, 92, 92);
+}
+.categories h3:nth-of-type(2){
+  margin-top: 50px;
+}
+.categories p{
+  margin-top: 20px;
+}
+.categories p input{
+  margin-right: 10px;
+}
+
+@media (width <= 830px){
+  .homeAndFilters{
+    display: none;
+  }
+  .homeMobile{
+    display: initial;
+  }
+  .categoriesAndFilersMobile{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 4%;
+  }
+  .categories{
+    display: none;
+  }
+}

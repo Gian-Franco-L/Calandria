@@ -1,0 +1,78 @@
+.itemGrid{
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+  border-bottom: 1px solid black;
+}
+
+.gridItemsCenterWithBorder{
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid black;
+}
+
+.nameGrid{
+  display: flex;
+  align-items: center;
+  grid-column: 1 / 6;
+  grid-row: 1 / 3;
+  border-right: 1px solid black;
+  padding-left: 5%;
+}
+.priceGrid{
+  grid-column: 6 / 9;
+}
+.changePriceGrid{
+  grid-column: 6 / 9;
+  grid-row: 2 / 3;
+}
+.changePriceGrid input{
+  height: 90%;
+  width: 35%;
+  padding-left: 1%;
+}
+.stockGrid{
+  grid-column: 9 / 12;
+}
+.changeStockGrid{
+  grid-column: 9 / 12;
+  grid-row: 2 / 3;
+}
+.changeStockGrid input{
+  height: 90%;
+  width: 20%;
+  padding-left: 1%;
+}
+.discountGrid{
+  grid-column: 12 / 15;
+}
+.changeDiscountGrid{
+  grid-column: 12 / 15;
+  grid-row: 2 / 3;
+}
+.changeDiscountGrid input{
+  height: 90%;
+  width: 15%;
+  padding-left: 1%;
+}
+.visibilityGrid{
+  grid-column: 15 / 18;
+}
+.changeVisibilityGrid{
+  grid-column: 15 / 18;
+  grid-row: 2 / 3;
+}
+.changeVisibilityGrid input{
+  height: 90%;
+  width: 10%;
+  padding-left: 1%;
+}
+
+.changeButton{
+  grid-column: 18 / 21;
+  grid-row: 1 / 3;
+  background-color: transparent;
+  border: none;
+}
+.changeButton:hover{
+  transform: scale(1.2);
+}

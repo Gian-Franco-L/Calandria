@@ -1,0 +1,128 @@
+.mainContainerPc{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid #9d9d9d;
+}
+.mainContainerMobile{
+  width: 100%;
+  display: none;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.searchInput{
+  position: relative;
+  display: flex;
+  height: 45px;
+  grid-column: 2/10;
+  align-self: center;
+}
+
+.navList{
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  font-size: 1.5rem;
+}
+.navList div{
+  text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+.navList a{
+  text-decoration: none;
+  color: black;
+}
+.navList li{
+  position: relative;
+}
+.productsList{
+  list-style-type: none;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  margin-top: .5%;
+  background-color: white;
+  border-bottom: 1px solid #9d9d9d;
+  border-left: 1px solid #9d9d9d;
+  border-right: 1px solid #9d9d9d;
+  align-items: center;
+  transition: .5s;
+}
+.productsList li{
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.productsList li:hover{
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.productListOn{
+  display: inline-block;
+}
+.productListOff{
+  display: none;
+}
+
+.normalNavBar{
+  top: 145%;
+}
+.smallNavBar{
+  top: 110%;
+}
+
+.brandList{
+  list-style-type: none;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  margin-top: .5%;
+  background-color: white;
+  border-bottom: 1px solid #9d9d9d;
+  border-left: 1px solid #9d9d9d;
+  border-right: 1px solid #9d9d9d;
+  align-items: center;
+  transition: .5s;
+}
+.brandList li{
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+.brandList li:hover{
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.brandListOn{
+  display: inline-block;
+}
+.brandListOff{
+  display: none;
+}
+
+@media (width <= 1315px){
+  .navList{
+    width: 50%;
+  }
+}
+@media (width <= 991px){
+  .mainContainerPc{
+    display: none;
+  }
+  .mainContainerMobile{
+    display: grid;
+  }
+}

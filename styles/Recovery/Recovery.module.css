@@ -1,0 +1,62 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 450px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+.mainContainer h1{
+  margin-bottom: 20px;
+}
+.mainContainer form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80%;
+  width: 30%;
+}
+.mainContainer form div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+.mainContainer form button{
+  height: 30px;
+  width: 100%;
+}
+
+.links{
+  display: flex;
+  margin-bottom: 50px;
+}
+.links p{
+  font-size: 1rem;
+}
+.links a{
+  color: rgb(79, 79, 79);
+  text-decoration: none;
+}
+.links a:hover{
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+
+.explanation{
+  text-align: center;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+@media (width <= 991px){
+  .mainContainer{
+    height: 400px;
+    margin-bottom: 0px;
+  }
+  .mainContainer form{
+    height: 50%;
+    width: 90%;
+  }
+}

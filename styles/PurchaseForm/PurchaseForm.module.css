@@ -1,0 +1,114 @@
+.mainContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.mainContainer p{
+  font-size: clamp(.5rem , 4vw, 1rem);
+}
+
+.homeLink{
+  position: absolute;
+  top: -50px;
+  display: flex;
+}
+.homeLink a{
+  color: rgb(79, 79, 79);
+  text-decoration: none;
+}
+.homeLink a:hover{
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+.homeLink p{
+  font-size: 1rem;
+}
+
+.articlesTotal{
+  position: relative;
+  width: 600px;
+  height: 100%;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.cartArticles{
+  display: flex;
+  flex-direction: column;
+  max-height: 40%;
+  margin-top: 5%;
+  padding: 2%;
+  overflow-y: scroll;
+  overflow: auto;
+}
+.cartArticles::-webkit-scrollbar {
+  display: none;
+}
+
+.formInfomation{
+  width: 600px;
+  margin-left: 2%;
+}
+
+.shipping{
+  display: flex;
+  align-items: center;
+}
+.truckIcon{
+  height: 20px;
+  width: 20px;
+  margin-right: 2%;
+}
+
+.location{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  margin-top: 2%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  background-color: white;
+}
+.location:focus{
+  border: 1px solid rgb(50, 50, 150);
+}
+.location p{
+  margin-left: 6%;
+}
+.location h3{
+  margin-right: 6%;
+}
+
+.flexBetween{
+  display: flex;
+  justify-content: space-between;
+}
+
+.apearPerson{
+  display: initial;
+}
+.desapearPerson{
+  display: none;
+}
+
+@media (width <= 1225px){
+  .formInfomation{
+    margin-top: 50px;
+  }
+}
+@media (width <= 991px){
+  .mainContainer{
+    margin-top: 60px;
+  }
+  .articlesTotal{
+    width: 90%;
+  }
+  .formInfomation{
+    width: 90%;
+    margin-bottom: 5%;
+  }
+}

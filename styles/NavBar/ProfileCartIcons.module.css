@@ -1,0 +1,92 @@
+.mainContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  grid-column: 9 / 11;
+}
+.cartIconContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.profileIconContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.profileIcon{
+  height: 70%;
+  width: 30px;
+}
+
+.signOrRegister{
+  z-index: 1;
+  position: absolute;
+  height: auto;
+  top: 43%;
+  background-color: white;
+  border-bottom: 1px solid #9d9d9d;
+  border-right: 1px solid #9d9d9d;
+  border-left: 1px solid #9d9d9d;
+  transition: .5s;
+}
+.signOrRegister a{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  padding: 3.8px;
+  color: black;
+}
+.signOrRegister a:hover{
+  color: white;
+  background-color: black;
+}
+
+.signOrRegisteOn{
+  display: initial;
+}
+.signOrRegisteOff{
+  display: none;
+}
+
+.normalNavBar{
+  top: 53%;
+}
+.smallNavBar{
+  top: 58%
+}
+
+.cartIcon{
+  height: 70%;
+  width: 30px;
+  cursor: pointer;
+}
+
+.cartContainer{
+  z-index: 1;
+  display: none;
+  position: absolute;
+}
+
+.cartBackground{
+  height: 100vh;
+  width: 100vw;
+  background-color: #36363668;
+  cursor: pointer;
+}
+
+@media (width <= 991px){
+  .mainContainer{
+    grid-column: 9 / 11;
+  }
+  .profileIconContainer{
+    display: none;
+  }
+}

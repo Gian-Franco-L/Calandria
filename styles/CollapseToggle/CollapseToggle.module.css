@@ -1,0 +1,12 @@
+.button{
+  background-color: rgb(50, 50, 150);
+}
+
+.itemCollapse{
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  width: 100%;
+  height: 40px;
+  font-size: .8rem;
+}

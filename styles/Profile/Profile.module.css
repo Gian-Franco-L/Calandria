@@ -1,0 +1,94 @@
+.mainContainer{
+  margin-top: 200px;
+}
+.mainContainer h1{
+  text-align: center;
+}
+
+.profileContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.profileInfo{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  width: 400px;
+  height: 180px;
+}
+.profileInfo h4{
+  text-align: center;
+}
+.profileInfo h5{
+  margin-left: 10px;
+}
+
+.links{
+  position: absolute;
+  display: flex;
+  top: -100px;
+  margin-bottom: 50px;
+}
+.links a{
+  color: rgb(79, 79, 79);
+  text-decoration: none;
+}
+.links a:hover{
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+
+.purchases{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-bottom: none;
+  width: 1000px;
+}
+
+.purchases div{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.totalContainer{
+  display: flex;
+  justify-content: right;
+  align-items: bottom;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.totalContainer h5{
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+@media (width <= 1414px){
+  .profileInfo{
+    margin-bottom: 50px;
+  }
+}
+
+@media (width <= 1420px){
+  .purchases{
+    width: 550px;
+  }
+}
+@media (width <= 991px){
+  .profileInfo{
+    width: 90vw;
+  }
+  .purchases{
+    width: 90vw;
+  }
+  .links{
+    top: -35px;
+  }
+}

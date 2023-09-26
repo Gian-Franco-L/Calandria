@@ -1,0 +1,19 @@
+.topNavBarContainer{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.searchInput{
+  position: relative;
+  display: flex;
+  height: 45px;
+  grid-column: 4 / 8;
+  align-self: center;
+}
+
+@media (width <= 991px){
+  .searchInput{
+    display: none;
+  }
+}

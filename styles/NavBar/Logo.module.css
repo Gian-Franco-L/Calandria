@@ -1,0 +1,30 @@
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  grid-column: 2;
+  border: 1px solid black;
+  align-self: center;
+  transition-duration: 1s;
+  color: black;
+  text-decoration: none;
+}
+.smallLogo{
+  width: 50%;
+}
+.normalLogo{
+  width: 100%;
+}
+
+@media (width <= 991px){
+  .logo{
+    grid-column: 4 / 8;
+  }
+  .smallLogo{
+    width: 100%;
+  }
+  .normalLogo{
+    width: 100%;
+  }
+}

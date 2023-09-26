@@ -1,0 +1,35 @@
+.item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+  padding-bottom: 50px;
+}
+.item img{
+  height: 60px;
+  width: 40px;
+}
+
+.itemNameCant{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.itemTrashPrice{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+  height: 80%;
+}
+
+.trash{
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.trash:hover{
+  transform: scale(1.2);
+}

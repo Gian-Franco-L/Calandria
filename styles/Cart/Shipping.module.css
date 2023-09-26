@@ -1,0 +1,114 @@
+.shipping{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding-left: 3%;
+  padding-right: 2%;
+}
+.shipping form{
+  margin-top: 3%;
+}
+.shipping a{
+  width: 58%;
+  margin-top: 2%;
+  font-size: .9rem;
+  text-decoration: none;
+  color: black;
+}
+.shipping a:hover{
+  color: rgb(50, 50, 150);
+}
+.shipping form input{
+  height: 35px;
+  width: 60%;
+  border-radius: 20px;
+  border: 1px solid grey;
+  padding-left: 2%;
+  outline: none;
+}
+.shipping form input:focus{
+  border: 1px solid rgb(72, 72, 72);
+}
+.shipping form button{
+  height: 35px;
+  width: 30%;
+  margin-left: 10%;
+  border-radius: 20px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+.shipping form button:active{
+  transform: scale(1.05);
+}
+
+.truckAndTittle{
+  display: flex;
+}
+.truckAndTittle p{
+  padding-left: 2%;
+}
+
+.truckIcon{
+  height: 20px;
+  width: 20px;
+}
+
+.postalChange{
+  display: flex;
+  justify-content: space-between;
+}
+.postalChange button{
+  width: 30%;
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+.postalChange button:active{
+  transform: scale(1.05);
+}
+
+.locationAndTittle{
+  display: flex;
+  margin-top: 5%
+}
+.locationAndTittle p{
+  padding-left: 2%;
+}
+
+.locationIcon{
+  height: 20px;
+  width: 20px;
+}
+
+.location{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  margin-top: 2%;
+  border-radius: 10px;
+  border: 1px solid grey;
+  background-color: white;
+}
+.location:focus{
+  border: 1px solid rgb(50, 50, 150);
+}
+.location p{
+  margin-left: 6%;
+}
+.location h3{
+  margin-right: 6%;
+}
+
+@media (width <= 991px){
+  .shipping a{
+    width: 80%;
+  }
+  .location p{
+    text-align: left;
+    margin-left: 10px;
+  }
+  .location h3{
+    margin-right: 10px;
+  }
+}

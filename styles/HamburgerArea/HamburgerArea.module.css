@@ -1,0 +1,105 @@
+.hamburgerAreaContainer{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  overflow-y: scroll;
+  overflow: auto;
+}
+
+.openHamburgerArea{
+  animation-name: openHamburgerAreaMovement;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes openHamburgerAreaMovement{
+  0%{
+    left: -100%;
+  }
+  100%{
+    left: 0;
+  }
+}
+
+.closeHamburgerArea{
+  animation-name: closeHamburgerAreaMovement;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier();
+  animation-fill-mode: forwards;
+}
+@keyframes closeHamburgerAreaMovement {
+  0%{
+    left: 0;
+  }
+  100%{
+    left: -100%;
+  }
+}
+
+.tittle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+
+.closeHamburgerAreaButton{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: 20px;
+  font-size: 1.3rem;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.collapseOptions{
+  height: 100%;
+}
+.collapseOptions a{
+  color: black;
+  text-decoration: none;
+}
+
+.signInRegister{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+  height: 50px;
+  margin-left: 15%;
+  padding-left: 0px;
+  background-color: black;
+  color: white;
+}
+.signInRegister h2{
+  font-size: 1rem;
+}
+.signInRegister a{
+  color: white;
+  text-decoration: none;
+}
+
+.profileIcon{
+  height: 70%;
+  width: 30px;
+}
+
+.selectedProducts{
+  padding-bottom: 90px;
+  background-color: transparent;
+}
+.selectedBrands{
+  padding-bottom: 90px;
+  background-color: transparent;
+}

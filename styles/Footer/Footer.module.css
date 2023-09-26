@@ -1,0 +1,179 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 500px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.socialMedias{
+  display: flex;
+  justify-content: center;
+}
+
+.instaIcon{
+  height: 25px;
+  width: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.fbIcon{
+  height: 25px;
+  width: 25px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.directLinksContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.directLinks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 650px;
+}
+.directLinks a{
+  width: 120px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.wpp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wppIcon{
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.mail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mailIcon{
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.location{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.locationIcon{
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.paySectionContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.paySection{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.paySection span{
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid rgb(219, 219, 219);
+}
+
+.shippingContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.shippingSection{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 25%;
+}
+.shippingSection span{
+  padding: 4px;
+  border: 1px solid rgb(219, 219, 219);
+}
+
+.copyRight{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: .8rem;
+}
+.copyRight span{
+  display: flex;
+  align-items: center;
+  margin-right: 1px;
+}
+
+.consumersDef{
+  display: flex;
+  justify-content: center;
+}
+.consumersDef p{
+  font-size: .8rem;
+}
+.consumersDef p a{
+  color: black;
+}
+
+@media (width <= 1315px){
+  .paySection{
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+@media (width <= 800px){
+  .shippingSection{
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+@media (width <= 495px){
+  .mainContainer{
+    height: 800px;
+  }
+  .mainContainer section{
+    margin-bottom: 20px;
+  }
+
+  .directLinks{
+    justify-content: center;
+    height: 150px;
+  }
+  
+  .consumersDef{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (width <= 235px){
+  .mainContainer{
+    height: 900px;
+  }
+}

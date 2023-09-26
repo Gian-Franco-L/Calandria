@@ -1,0 +1,127 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-top: 190px;
+}
+
+.itemContainer{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 80px;
+}
+/* .itemContainer div img{
+  height: 700px;
+} */
+.itemContainer article main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemPhotos{
+  display: flex;
+  justify-content: right;
+  width: 50%;
+}
+.itemPhotos section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 5%;
+}
+.itemPhotos section div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(189, 189, 189);
+}
+.itemPhotos section div:hover{
+  border: 1px solid black;
+}
+.itemPhotosMobile{
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.itemPhotosMobile section{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.itemPhotosMobile section div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  margin-top: 5%;
+  background-color: rgb(189, 189, 189);
+}
+.itemPhotosMobile section div:hover{
+  border: 1px solid black;
+}
+.img{
+  height: 600px;
+  width: 600px;
+  background-color: rgb(175, 175, 175);
+}
+
+.itemInfo{
+  display: flex;
+  align-self: left;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 600px;
+  width: 40%;
+}
+
+.homeLink{
+  display: flex;
+}
+.homeLink a{
+  color: rgb(79, 79, 79);
+  text-decoration: none;
+}
+.homeLink a:hover{
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+
+@media (width <= 991px){
+  .mainContainer{
+    margin-top: 180px;
+  }
+  .itemContainer{
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 80px;
+  }
+  .itemPhotos{
+    display: none;
+  }
+  .itemPhotosMobile{
+    display: flex;
+    align-items: center;
+    width: 95%;
+  }
+  .img{
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(175, 175, 175);
+  }
+  .itemInfo{
+    border-top: 1px solid grey;
+    width: 100%;
+    margin-top: 5%;
+  }
+}

@@ -1,0 +1,12 @@
+.articles{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 65%;
+}
+
+@media (width <= 630px){
+  .articles{
+    justify-content: center;
+  }
+}

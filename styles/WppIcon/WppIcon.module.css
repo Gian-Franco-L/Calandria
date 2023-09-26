@@ -1,0 +1,22 @@
+.WppIconContainer{
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  bottom: 1%;
+  right: .5%;
+  border-radius: 50%;
+  background-color: #47b947;
+  box-shadow: 1px 1px 5px .5px #6d6d6d;
+  cursor: pointer;
+}
+
+@media (width <= 991px){
+  .WppIconContainer{
+    bottom: 1%;
+    right: 1.5%;
+  }
+}

@@ -1,0 +1,35 @@
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.mainContainer section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+.mainContainer section div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  background-color: rgb(168, 168, 168);
+  margin-bottom: 20px;
+}
+.mainContainer article{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.greyBar{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border: 1px solid rgba(0, 0, 0, 0.214);
+  width: 90%;
+}
