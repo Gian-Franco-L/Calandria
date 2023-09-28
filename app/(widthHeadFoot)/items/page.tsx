@@ -3,8 +3,12 @@ import Link from "next/link";
 import ArticlesContainer from "@/components/ArticlesContainer/ArticlesContainer";
 import ArticlesStyles from "@/styles/Articles/Articles.module.css"
 import CategoriesFilters from "@/components/CategoriesFilters/CategoriesFilters";
+import { fetchArticles } from "@/actions/fetchArticles";
 
-export default function Items(){
+export default async function Items(){
+
+  const initialArticles = await fetchArticles(1)
+
   return(
     <div className={ArticlesStyles.mainContainer}>
       <section className={ArticlesStyles.homeAndFilters}>
@@ -54,7 +58,7 @@ export default function Items(){
           <p><input type="checkbox" />Filtro5</p>
           <p><input type="checkbox" />Filtro6</p>
         </article>
-        <ArticlesContainer />
+        <ArticlesContainer initialArticles={initialArticles}/>
       </section>
     </div>
   )

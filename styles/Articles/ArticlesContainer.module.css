@@ -5,6 +5,11 @@
   width: 65%;
 }
 
+.spinner{
+  position: absolute;
+  bottom: 0;
+}
+
 @media (width <= 630px){
   .articles{
     justify-content: center;

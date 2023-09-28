@@ -1,22 +1,68 @@
-import React from "react";
+'use client'
+
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer"
 import SingleArticle from "./SingleArticle/SingleArticle"
 import Skeletons from "./Skeletons/Skeletons";
-import productService from "@/services/product"
 import { v4 as uuidv4 } from "uuid"
 import ArticlesContainerStyles from "@/styles/Articles/ArticlesContainer.module.css"
+import LoaderSpinner from "@/components/LoaderSpinner/LoaderSpinner"
+import { fetchArticles } from "@/actions/fetchArticles";
 
-const getProducts = () =>{
-  return productService.getAll()
+
+interface pageTypes{
+  initialArticles:[
+    {
+      id: string,
+      Name: string,
+      Price: number,
+      Date: number,
+      Size: string,
+      Img: string,
+      Stuffing: string,
+      Type: string,
+      Status: string,
+      Material: string
+    }
+  ]
 }
+export default function ArticlesContainer({initialArticles} :pageTypes){
 
-export default async function ArticlesContainer(){
+  const [articles, setArticles] = useState(initialArticles)
+  const [page, setPage] = useState(1)
+  const [ref, inView] = useInView()
 
-  const allArticles = await getProducts()
+  async function loadMoreArticles(){
+    const next = page + 1
+    const newArticles = await fetchArticles(next)
+
+    if(newArticles?.length){
+      setPage(next)
+      setArticles(newArticles)
+    }
+  }
+
+  useEffect(() =>{
+    if(inView){
+      loadMoreArticles()
+    }
+  }, [inView])
 
   return(
     <section className={ArticlesContainerStyles.articles}>
-      {allArticles.length !== 0
-        ? allArticles.slice(0, 10).map((item:any) =>{
+      {articles?.length
+        ? articles.map((item: {
+          id: string,
+          Name: string,
+          Price: number,
+          Date: number,
+          Size: string,
+          Img: string,
+          Stuffing: string,
+          Type: string,
+          Status: string,
+          Material: string
+        }) =>{
             return <SingleArticle 
                       item={item}
                       key={uuidv4()}
@@ -24,6 +70,9 @@ export default async function ArticlesContainer(){
           })
         : <Skeletons />
       }
+      <div className={ArticlesContainerStyles.spinner} ref={ref}>
+        <LoaderSpinner />
+      </div>
     </section>
   )
 }
