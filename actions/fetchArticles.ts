@@ -2,10 +2,28 @@
 
 import productService from "@/services/product"
 
-export async function fetchArticles(page: number){
+
+export default async function fetchArticles(page: number, search?: string){
   const articlesCant = 10
+  
 
   const getArticles = await productService.getAll()
+
+  if(search){
+    if(search === 'Precio<'){
+      getArticles.sort((a: any, b: any) => a.Price - b.Price);
+    }
+    if(search === 'Precio>'){
+      getArticles.sort((a: any, b: any) => b.Price - a.Price);
+    }
+    if(search === 'Tiempo>'){
+      getArticles.sort((a: any, b: any) => b.Date - a.Date);
+    }
+    if(search === 'Tiempo<'){
+      getArticles.sort((a: any, b: any) => a.Date - b.Date);
+    }
+  }
+
 
   let articlesResu:[
     {

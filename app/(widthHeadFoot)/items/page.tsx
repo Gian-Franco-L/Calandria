@@ -3,11 +3,12 @@ import Link from "next/link";
 import ArticlesContainer from "@/components/ArticlesContainer/ArticlesContainer";
 import ArticlesStyles from "@/styles/Articles/Articles.module.css"
 import CategoriesFilters from "@/components/CategoriesFilters/CategoriesFilters";
-import { fetchArticles } from "@/actions/fetchArticles";
+import fetchArticles from "@/actions/fetchArticles";
+import Filter from "@/components/Filter/Filter";
 
 export default async function Items(){
 
-  const initialArticles = await fetchArticles(1)
+  const initialArticles = await fetchArticles(1, 'Precio<')
 
   return(
     <div className={ArticlesStyles.mainContainer}>
@@ -18,13 +19,7 @@ export default async function Items(){
           <p>Categoria</p>
         </article>
         <article>
-          <select name="filter">
-            <option value=""><p>Precio: Menor a mayor</p></option>
-            <option value="">Precio: Mayor a menor</option>
-            <option value="">Mas nuevo a mas viejo</option>
-            <option value="">Mas viejo a mas nuevo</option>
-            <option value="">Mas vendido</option>
-          </select>
+          <Filter />
         </article>
       </section>
       <section className={ArticlesStyles.homeMobile}>

@@ -7,7 +7,8 @@ import Skeletons from "./Skeletons/Skeletons";
 import { v4 as uuidv4 } from "uuid"
 import ArticlesContainerStyles from "@/styles/Articles/ArticlesContainer.module.css"
 import LoaderSpinner from "@/components/LoaderSpinner/LoaderSpinner"
-import { fetchArticles } from "@/actions/fetchArticles";
+import fetchArticles from "@/actions/fetchArticles";
+import { useSearchParams } from 'next/navigation'
 
 
 interface pageTypes{
@@ -32,15 +33,31 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
   const [page, setPage] = useState(1)
   const [ref, inView] = useInView()
 
+  const searchParams = useSearchParams()
+  const search = searchParams.get('filter')
+
   async function loadMoreArticles(){
     const next = page + 1
-    const newArticles = await fetchArticles(next)
+    let newArticles
+
+    if(search){
+      newArticles = await fetchArticles(next, search)
+    }else{
+      newArticles = await fetchArticles(next)
+    }
 
     if(newArticles?.length){
       setPage(next)
       setArticles(newArticles)
     }
   }
+
+  useEffect(() =>{
+    if(search){
+      fetchArticles(1, search)
+        .then(newArticles => setArticles(newArticles))
+    }
+  }, [search])
 
   useEffect(() =>{
     if(inView){
