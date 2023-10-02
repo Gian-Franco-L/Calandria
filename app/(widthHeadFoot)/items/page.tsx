@@ -5,6 +5,7 @@ import ArticlesStyles from "@/styles/Articles/Articles.module.css"
 import CategoriesFilters from "@/components/CategoriesFilters/CategoriesFilters";
 import fetchArticles from "@/actions/fetchArticles";
 import Filter from "@/components/Filter/Filter";
+import FiltersCheckbox from "@/components/FiltersCheckbox/FiltersCheckbox";
 
 export default async function Items(){
 
@@ -31,13 +32,7 @@ export default async function Items(){
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>
         <CategoriesFilters />
-        <select name="filter">
-          <option value=""><p>Precio: Menor a mayor</p></option>
-          <option value="">Precio: Mayor a menor</option>
-          <option value="">Mas nuevo a mas viejo</option>
-          <option value="">Mas viejo a mas nuevo</option>
-          <option value="">Mas vendido</option>
-        </select>
+        <Filter />
       </section>
       <section className={ArticlesStyles.categoriesAndItems}>
         <article className={ArticlesStyles.categories}>
@@ -45,13 +40,7 @@ export default async function Items(){
           <Link href="#">Tipo1</Link>
           <Link href="#">Tipo2</Link>
           <Link href="#">Tipo3</Link>
-          <h3>Filtrar por</h3>
-          <p><input type="checkbox" />Filtro1</p>
-          <p><input type="checkbox" />Filtro2</p>
-          <p><input type="checkbox" />Filtro3</p>
-          <p><input type="checkbox" />Filtro4</p>
-          <p><input type="checkbox" />Filtro5</p>
-          <p><input type="checkbox" />Filtro6</p>
+          <FiltersCheckbox />
         </article>
         <ArticlesContainer initialArticles={initialArticles}/>
       </section>

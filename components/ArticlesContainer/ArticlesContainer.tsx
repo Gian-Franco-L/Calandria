@@ -34,14 +34,15 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
   const [ref, inView] = useInView()
 
   const searchParams = useSearchParams()
-  const search = searchParams.get('filter')
+  const searchFilter = searchParams.get('filter')
+  const searchItemTypes = searchParams.get('itemTypes')
 
   async function loadMoreArticles(){
     const next = page + 1
     let newArticles
 
-    if(search){
-      newArticles = await fetchArticles(next, search)
+    if(searchFilter){
+      newArticles = await fetchArticles(next, searchFilter)
     }else{
       newArticles = await fetchArticles(next)
     }
@@ -53,11 +54,9 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
   }
 
   useEffect(() =>{
-    if(search){
-      fetchArticles(1, search)
+    fetchArticles(1, searchFilter, searchItemTypes)
         .then(newArticles => setArticles(newArticles))
-    }
-  }, [search])
+  }, [searchFilter, searchItemTypes])
 
   useEffect(() =>{
     if(inView){

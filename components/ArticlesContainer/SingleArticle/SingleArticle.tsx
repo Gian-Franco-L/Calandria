@@ -10,10 +10,12 @@ interface pageType{
     Size: string,
     Material: string,
     Stuffing: string,
-    Img: string
+    Img: string,
+    id: string
   }
 }
 export default function SigleArticle({ item }: pageType){
+
   return(
     <div className={SingleArticleStyles.mainContainer}>
       <img src={item.Img} alt="" />
@@ -22,9 +24,9 @@ export default function SigleArticle({ item }: pageType){
         <p>${item.Price}</p>
       </div>
       <section>
-        <Link href="/items/123"></Link>
+        <Link href={`/items/${item.id}`}></Link>
         <button>Comprar</button>
-        <Link href="/items/123" className={SingleArticleStyles.seeButton}>
+        <Link href={`/items/${item.id}`} className={SingleArticleStyles.seeButton}>
           <button>Ver</button>
         </Link>
       </section>

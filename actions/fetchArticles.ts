@@ -3,24 +3,37 @@
 import productService from "@/services/product"
 
 
-export default async function fetchArticles(page: number, search?: string){
+export default async function fetchArticles(page: number, search?: string | null, filter?: string | null){
   const articlesCant = 10
-  
 
-  const getArticles = await productService.getAll()
+  let getArticles = await productService.getAll()
+
+  if(search === null) search = 'Precio<'
 
   if(search){
     if(search === 'Precio<'){
-      getArticles.sort((a: any, b: any) => a.Price - b.Price);
+      getArticles = getArticles.sort((a: any, b: any) => a.Price - b.Price);
     }
     if(search === 'Precio>'){
-      getArticles.sort((a: any, b: any) => b.Price - a.Price);
+      getArticles = getArticles.sort((a: any, b: any) => b.Price - a.Price);
     }
     if(search === 'Tiempo>'){
-      getArticles.sort((a: any, b: any) => b.Date - a.Date);
+      getArticles = getArticles.sort((a: any, b: any) => b.Date - a.Date);
     }
     if(search === 'Tiempo<'){
-      getArticles.sort((a: any, b: any) => a.Date - b.Date);
+      getArticles = getArticles.sort((a: any, b: any) => a.Date - b.Date);
+    }
+  }
+
+  if(filter){
+    if(filter === 'Hogar'){
+      getArticles = getArticles.filter((item: any) => item.Type === 'hogar');
+    }
+    if(filter === 'Niños'){
+      getArticles = getArticles.filter((item: any) => item.Type === 'niños');
+    }
+    if(filter === 'Hogar|Niños'){
+      getArticles = getArticles.filter((item: any) => item);
     }
   }
 

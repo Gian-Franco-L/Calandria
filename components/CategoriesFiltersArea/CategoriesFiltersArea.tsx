@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import CategoriesFiltersAreaStyles from "@/styles/CategoriesFiltersArea/CategoriesFiltersArea.module.css"
 import useGetNavBarScroll from "@/hooks/useGetNavBarScroll";
+import FiltersCheckbox from "../FiltersCheckbox/FiltersCheckbox";
 import { GrFormDown } from "react-icons/gr"
 
 interface Pagetypes{
@@ -28,13 +29,7 @@ export default function CategoriesFiltersArea({ categoriesStatus, setCategoriesS
           <Link href="#">Tipo3</Link>
         </article>
         <article>
-          <h3>Filtrar por</h3>
-          <p><input type="checkbox" />Filtro1</p>
-          <p><input type="checkbox" />Filtro2</p>
-          <p><input type="checkbox" />Filtro3</p>
-          <p><input type="checkbox" />Filtro4</p>
-          <p><input type="checkbox" />Filtro5</p>
-          <p><input type="checkbox" />Filtro6</p>
+          <FiltersCheckbox />
         </article>
       </section>
     </div>

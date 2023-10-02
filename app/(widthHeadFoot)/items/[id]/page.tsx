@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -7,6 +9,7 @@ import ItemStyles from "@/styles/Items/Item.module.css"
 import { Slides1 } from "@/components/NewsCarousel/Slides/Slides1"
 import { Slides2 } from "@/components/NewsCarousel/Slides/Slides2"
 import { Slides3 } from "@/components/NewsCarousel/Slides/Slides3"
+import { usePathname } from 'next/navigation'
 
 interface pageTypes{
   params: object
@@ -14,6 +17,7 @@ interface pageTypes{
 export default function item({ params }: pageTypes){
 
   // const { id } = params
+  const pathname = usePathname()
 
   return(
     <main className={ItemStyles.mainContainer}>
