@@ -71,6 +71,16 @@
   text-decoration: none;
 }
 
+.collapseLinks{
+  display: flex;
+  flex-direction: column;
+}
+.collapseLinks a{
+  padding: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
 .signInRegister{
   display: flex;
   justify-content: space-evenly;

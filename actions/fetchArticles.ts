@@ -2,13 +2,25 @@
 
 import productService from "@/services/product"
 
+interface articleObject{
+  id: string,
+  Name: string,
+  Price: number,
+  Date: number,
+  Size: string,
+  Img: string,
+  Stuffing: string,
+  Type: string,
+  Status: string,
+  Material: string
+}
 
-export default async function fetchArticles(page: number, search?: string | null, filter?: string | null){
-  const articlesCant = 10
+export async function fetchArticles(page: number, search?: string | null, filter?: string | null){
+  const articlesCant = 25
 
   let getArticles = await productService.getAll()
 
-  if(search === null) search = 'Precio<'
+  if(search === null || search === undefined) search = 'Precio<'
 
   if(search){
     if(search === 'Precio<'){
@@ -37,21 +49,30 @@ export default async function fetchArticles(page: number, search?: string | null
     }
   }
 
+  let articlesResu:[articleObject] = [getArticles[0]]
 
-  let articlesResu:[
-    {
-      id: string,
-      Name: string,
-      Price: number,
-      Date: number,
-      Size: string,
-      Img: string,
-      Stuffing: string,
-      Type: string,
-      Status: string,
-      Material: string
-    }
-  ] = [getArticles[0]]
+  for(let i=1; i<articlesCant*page; i++){
+    articlesResu.push(getArticles[i])
+  }
+
+  return articlesResu
+}
+
+
+export async function fetchSearchedArticles(page: number, search: {id: string}){
+  const articlesCant = 25
+
+  let getArticles = await productService.getAll()
+
+  if(search){
+    getArticles = getArticles.filter((value: articleObject) =>{
+      const todoText = value.Name.toLowerCase()
+      const searchText = search.id.toLowerCase()
+      return todoText.includes(searchText)
+    })
+  }
+
+  let articlesResu:[articleObject] = [getArticles[0]]
 
   for(let i=1; i<articlesCant*page; i++){
     articlesResu.push(getArticles[i])

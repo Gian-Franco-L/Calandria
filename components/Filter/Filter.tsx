@@ -14,11 +14,11 @@ export default function Filter(){
 
   return(
     <select name="filter" onChange={event => router.push(`/items?filter=${event.target.value}${searchType !== null ? `&itemTypes=${searchType}` : ''}`)}>
-      <option value="Precio<"><p>Precio: Menor a mayor</p></option>
-      <option value="Precio>"><p>Precio: Mayor a menor</p></option>
-      <option value="Tiempo>"><p>Mas nuevo a mas viejo</p></option>
-      <option value="Tiempo<"><p>Mas viejo a mas nuevo</p></option>
-      {/* <option value="+Vendido"><p>Mas vendido</p></option> */}
+      <option value="Precio<">Precio: Menor a mayor</option>
+      <option value="Precio>">Precio: Mayor a menor</option>
+      <option value="Tiempo>">Mas nuevo a mas viejo</option>
+      <option value="Tiempo<">Mas viejo a mas nuevo</option>
+      {/* <option value="+Vendido">Mas vendido</option> */}
     </select>
   )
 }

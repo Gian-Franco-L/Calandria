@@ -3,11 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 export default function FiltersCheckbox(){
 
   const searchParams = useSearchParams()
   const searchFilter = searchParams.get('filter')
+  const pathname = usePathname()
 
   const router = useRouter()
   const [checks, setChecks] = useState([
@@ -32,7 +34,7 @@ export default function FiltersCheckbox(){
   }
 
   useEffect(() =>{
-    router.push(`/items?${searchFilter !== null ? `filter=${searchFilter}` : ''}${(checks[0].status && checks[1].status) ? '&itemTypes=Hogar|Niños': checks[0].status ? '&itemTypes=Hogar': checks[1].status ? '&itemTypes=Niños' : ''}`)
+    router.push(`http://localhost:3000/${pathname}?${searchFilter !== null ? `filter=${searchFilter}` : ''}${(checks[0].status && checks[1].status) ? '&itemTypes=Hogar|Niños': checks[0].status ? '&itemTypes=Hogar': checks[1].status ? '&itemTypes=Niños' : ''}`)
   }, [checks])
 
   return(

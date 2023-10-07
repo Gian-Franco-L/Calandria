@@ -1,0 +1,38 @@
+.mainContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+.mainContainer h1{
+  text-align: center;
+}
+
+.searchedContainer{
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.searchedContainer h1{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.searchedContainer h5{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.searchedItems{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.spinner{
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 15px);
+}

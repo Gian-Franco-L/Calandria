@@ -7,7 +7,7 @@ import Skeletons from "./Skeletons/Skeletons";
 import { v4 as uuidv4 } from "uuid"
 import ArticlesContainerStyles from "@/styles/Articles/ArticlesContainer.module.css"
 import LoaderSpinner from "@/components/LoaderSpinner/LoaderSpinner"
-import fetchArticles from "@/actions/fetchArticles";
+import { fetchArticles } from "@/actions/fetchArticles";
 import { useSearchParams } from 'next/navigation'
 
 
@@ -32,6 +32,7 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
   const [articles, setArticles] = useState(initialArticles)
   const [page, setPage] = useState(1)
   const [ref, inView] = useInView()
+  const [spinnerState, setSpinnerState] = useState(true)
 
   const searchParams = useSearchParams()
   const searchFilter = searchParams.get('filter')
@@ -41,8 +42,8 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
     const next = page + 1
     let newArticles
 
-    if(searchFilter){
-      newArticles = await fetchArticles(next, searchFilter)
+    if(searchFilter || searchItemTypes){
+      newArticles = await fetchArticles(next, searchFilter, searchItemTypes)
     }else{
       newArticles = await fetchArticles(next)
     }
@@ -54,12 +55,16 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
   }
 
   useEffect(() =>{
+    setSpinnerState(true)
     fetchArticles(1, searchFilter, searchItemTypes)
         .then(newArticles => setArticles(newArticles))
   }, [searchFilter, searchItemTypes])
 
   useEffect(() =>{
-    if(inView){
+    if(articles[articles.length-1] === undefined){
+      setSpinnerState(false)
+    }
+    if(inView && spinnerState){
       loadMoreArticles()
     }
   }, [inView])
@@ -86,9 +91,12 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
           })
         : <Skeletons />
       }
-      <div className={ArticlesContainerStyles.spinner} ref={ref}>
-        <LoaderSpinner />
-      </div>
+      {
+        spinnerState === true
+          &&  <div className={ArticlesContainerStyles.spinner} ref={ref}>
+                <LoaderSpinner />
+              </div>
+      }
     </section>
   )
 }

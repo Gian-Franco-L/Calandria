@@ -13,7 +13,7 @@ export default function NavBar(){
   return(
     <nav className={`${NavBarStyles.NavBarContainer} ${NavBarStyles[navbarscrollStatus]}`}>
       <TopNavBar navbarscrollStatus={navbarscrollStatus}/>
-      <BottomNavBar navbarscrollStatus={navbarscrollStatus}/>
+      <BottomNavBar />
     </nav>
   )
 }

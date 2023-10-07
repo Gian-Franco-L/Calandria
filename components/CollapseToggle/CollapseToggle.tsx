@@ -1,13 +1,24 @@
 'use client'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import CollapseToggleStyle from "@/styles/CollapseToggle/CollapseToggle.module.css"
+import VueltaAlCole from './VueltaAlCole/VueltaAlCole';
+import Escritura from './Escritura/Escritura';
+import Carpetas from './Carpetas/Carpetas';
+import Cuadernos from './Cuadernos/Cuadernos';
+import Calculadoras from './Calculadoras/Calculadoras';
+import Arte from './Arte/Arte';
+import Geometria from './Geometria/Geometria';
+import Hojas from './Hojas/Hojas';
+import PapelesCartones from './PapelesCartones/PapelesCartones';
+import Pizarras from './Pizarras/Pizarras';
+import Otros from './Otros/Otros';
 
 interface PageTypes{
   option: string
 }
-function CollapseToggle({ option } : PageTypes) {
+export default function CollapseToggle({ option } : PageTypes) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -23,25 +34,26 @@ function CollapseToggle({ option } : PageTypes) {
       <Collapse in={open}>
         {
           option === 'Productos'
-            ? <div id="example-collapse-text">
-                <a className={CollapseToggleStyle.itemCollapse} href="/items">Producto1</a>
-                <a className={CollapseToggleStyle.itemCollapse} href="/items">Producto2</a>
-                <a className={CollapseToggleStyle.itemCollapse} href="/items">Producto3</a>
+            ? 
+                <div id="example-collapse-text">
+                  <VueltaAlCole option={"Vuelta al cole"}/>
+                  <Escritura option={"Escritura"}/>
+                  <Carpetas option={"Carpetas"}/>
+                  <Cuadernos option={"Cuadernos"}/>
+                  <Calculadoras option={"Calculadoras"}/>
+                  <Arte option={"Arte"}/>
+                  <Geometria option={"Geometría"}/>
+                  <Hojas option={"Hojas"}/>
+                  <PapelesCartones option={"Papeles y cartones"}/>
+                  <Pizarras option={"Pizarras"}/>
+                  <Otros option={"Otros"}/>
+                </div>
+            : <div id="example-collapse-text">
+                <a href="/contact" className={CollapseToggleStyle.itemCollapse}>Contacto</a>
+                <a href="" className={CollapseToggleStyle.itemCollapse}>Ofertas</a>
               </div>
-            : option === 'Marcas'
-                ? <div id="example-collapse-text">
-                    <a className={CollapseToggleStyle.itemCollapse} href="/items">Marca1</a>
-                    <a className={CollapseToggleStyle.itemCollapse} href="/items">Marca2</a>
-                    <a className={CollapseToggleStyle.itemCollapse} href="/items">Marca3</a>
-                  </div>
-                : <div id="example-collapse-text">
-                    <a href="/contact" className={CollapseToggleStyle.itemCollapse}>Contacto</a>
-                    <a href="" className={CollapseToggleStyle.itemCollapse}>Ofertas</a>
-                  </div>
         }
       </Collapse>
     </>
   );
 }
-
-export default CollapseToggle;

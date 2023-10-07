@@ -22,7 +22,6 @@
 
 .navList{
   list-style-type: none;
-  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -32,29 +31,24 @@
 }
 .navList div{
   text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;
-    cursor: pointer;
+  display: flex;
+  color: black;
+  cursor: pointer;
 }
 .navList a{
   text-decoration: none;
   color: black;
 }
-.navList li{
-  position: relative;
-}
 .productsList{
   list-style-type: none;
+  justify-content: space-around;
   position: absolute;
   height: auto;
   width: 100%;
-  margin-top: .5%;
+  top: 101%;
+  left: 0;
   background-color: white;
   border-bottom: 1px solid #9d9d9d;
-  border-left: 1px solid #9d9d9d;
-  border-right: 1px solid #9d9d9d;
-  align-items: center;
   transition: .5s;
 }
 .productsList li{
@@ -63,23 +57,30 @@
   padding-bottom: 10px;
 }
 .productsList li:hover{
-  color: white;
-  background-color: black;
+  color: blue;
   cursor: pointer;
 }
 
+.productSection{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+.productSection h5 li{
+  padding-bottom: 0;
+}
+.productSection span{
+  font-size: .9rem;
+}
+.productSection span li{
+  padding-top: 0px;
+}
+
 .productListOn{
-  display: inline-block;
+  display: flex;
 }
 .productListOff{
   display: none;
-}
-
-.normalNavBar{
-  top: 145%;
-}
-.smallNavBar{
-  top: 110%;
 }
 
 .brandList{

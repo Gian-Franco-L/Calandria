@@ -9,15 +9,13 @@ import ItemStyles from "@/styles/Items/Item.module.css"
 import { Slides1 } from "@/components/NewsCarousel/Slides/Slides1"
 import { Slides2 } from "@/components/NewsCarousel/Slides/Slides2"
 import { Slides3 } from "@/components/NewsCarousel/Slides/Slides3"
-import { usePathname } from 'next/navigation'
 
 interface pageTypes{
-  params: object
+  params: string
 }
 export default function item({ params }: pageTypes){
 
-  // const { id } = params
-  const pathname = usePathname()
+  console.log(params);
 
   return(
     <main className={ItemStyles.mainContainer}>
@@ -45,7 +43,9 @@ export default function item({ params }: pageTypes){
           <div className={ItemStyles.homeLink}>
             <Link href="/">Inicio</Link>
             <p>&nbsp;&#62;&nbsp;</p>
-            <Link href="/items">Categoria</Link>
+            <Link href="/items">Productos</Link>
+            <p>&nbsp;&#62;&nbsp;</p>
+            <Link href="/items/Adhesivos">Adhesivos</Link>
             <p>&nbsp;&#62;&nbsp;</p>
             <p>Item</p>
           </div>
