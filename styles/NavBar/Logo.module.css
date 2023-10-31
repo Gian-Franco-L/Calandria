@@ -2,13 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 100%;
   grid-column: 2;
   border: 1px solid black;
   align-self: center;
   transition-duration: 1s;
   color: black;
   text-decoration: none;
+  background-image: url(../../public/CalandriaLogoWhite.png);
+  background-position: center center;
+  background-size: cover;
 }
 .smallLogo{
   width: 50%;
@@ -18,7 +21,7 @@
 }
 
 @media (width <= 991px){
-  .logo{
+  .logo{  
     grid-column: 4 / 8;
   }
   .smallLogo{

@@ -1,15 +1,15 @@
 .mainContainer{
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  grid-column: 9 / 11;
+  justify-content: space-evenly;
+  grid-column: 8 / 11;
 }
 .cartIconContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: white;
 }
 
 .profileIconContainer{
@@ -17,24 +17,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: white;
 }
 
 .profileIcon{
   height: 70%;
-  width: 30px;
+  width: 40px;
+  cursor: pointer;
 }
 
 .signOrRegister{
   z-index: 1;
   position: absolute;
   height: auto;
+  width: 140px;
   top: 43%;
-  background-color: white;
-  border-bottom: 1px solid #9d9d9d;
-  border-right: 1px solid #9d9d9d;
-  border-left: 1px solid #9d9d9d;
+  box-shadow: 0px 1.3px 1px .5px white;
+  background-color: #3b151f;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   transition: .5s;
+  color: rgba(50, 50, 50);
+  text-shadow: 0px 0px 1px rgba(50, 50, 50);
 }
 .signOrRegister a{
   display: flex;
@@ -42,11 +48,11 @@
   width: 100%;
   text-decoration: none;
   padding: 3.8px;
-  color: black;
+  color: white;
 }
 .signOrRegister a:hover{
-  color: white;
-  background-color: black;
+  color: #a4304d;
+  text-shadow: 0px 0px 1px #a4304d;
 }
 
 .signOrRegisteOn{
@@ -57,7 +63,7 @@
 }
 
 .normalNavBar{
-  top: 53%;
+  top: 48%;
 }
 .smallNavBar{
   top: 58%
@@ -65,7 +71,7 @@
 
 .cartIcon{
   height: 70%;
-  width: 30px;
+  width: 40px;
   cursor: pointer;
 }
 

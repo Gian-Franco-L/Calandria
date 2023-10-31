@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 import Link from "next/link"
 import SingleArticleStyles from "@/styles/Articles/SingleArticles.module.css"
 
@@ -18,7 +19,12 @@ export default function SigleArticle({ item }: pageType){
 
   return(
     <div className={SingleArticleStyles.mainContainer}>
-      <img src={item.Img} alt="" />
+      <Image
+        src={item.Img} 
+        alt="" 
+        width={170}
+        height={500}
+      />
       <div>
         <h3>{item.Name}</h3>
         <p>${item.Price}</p>

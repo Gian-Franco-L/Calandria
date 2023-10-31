@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import ItemOnCartStyle from "@/styles/PurchaseForm/ItemOnCart.module.css"
 
 interface pageTypes{
@@ -15,7 +16,12 @@ interface pageTypes{
 export default function ItemsOnCart({ item }: pageTypes){
   return(
     <div className={ItemOnCartStyle.item}>
-      <img src={item.Img} alt="" />
+      <Image 
+        src={item.Img}
+        alt=""
+        width={500}
+        height={500}
+      />
       <p className={ItemOnCartStyle.name}>{item.Name}</p>
       <p className={ItemOnCartStyle.price}>${item.Price},00</p>
     </div>

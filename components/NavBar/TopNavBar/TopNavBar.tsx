@@ -29,7 +29,7 @@ export default function TopNavBar ({ navbarscrollStatus }: pageTypes){
               </>
       } */}
       <HamburgerOptions />
-      <Logo />
+      {/* <Logo /> */}
       <div className={TopNavBarStyles.searchInput}>
         <Search />
       </div>

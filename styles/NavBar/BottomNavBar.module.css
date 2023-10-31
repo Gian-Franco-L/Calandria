@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  border-top: 1px solid #9d9d9d;
+  background-color: #a4304d;
 }
 .mainContainerMobile{
   width: 100%;
@@ -29,15 +29,23 @@
   width: 40%;
   font-size: 1.5rem;
 }
+.navList li{
+  width: 25%;
+}
 .navList div{
   text-decoration: none;
   display: flex;
-  color: black;
+  color: white;
   cursor: pointer;
 }
 .navList a{
   text-decoration: none;
-  color: black;
+  color: white;
+  text-shadow: 0px 0px 1px white;
+}
+.navList a:hover{
+}
+.arrowDown{
 }
 .productsList{
   list-style-type: none;
@@ -45,10 +53,11 @@
   position: absolute;
   height: auto;
   width: 100%;
-  top: 101%;
+  top: 100%;
   left: 0;
-  background-color: white;
-  border-bottom: 1px solid #9d9d9d;
+  background-color: #3b151f;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   transition: .5s;
 }
 .productsList li{
@@ -57,7 +66,8 @@
   padding-bottom: 10px;
 }
 .productsList li:hover{
-  color: blue;
+  color: #a4304d;
+  text-shadow: 0px 0px 1px #a4304d;
   cursor: pointer;
 }
 
@@ -80,37 +90,6 @@
   display: flex;
 }
 .productListOff{
-  display: none;
-}
-
-.brandList{
-  list-style-type: none;
-  position: absolute;
-  height: auto;
-  width: 100%;
-  margin-top: .5%;
-  background-color: white;
-  border-bottom: 1px solid #9d9d9d;
-  border-left: 1px solid #9d9d9d;
-  border-right: 1px solid #9d9d9d;
-  align-items: center;
-  transition: .5s;
-}
-.brandList li{
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px; 
-}
-.brandList li:hover{
-  color: white;
-  background-color: black;
-  cursor: pointer;
-}
-
-.brandListOn{
-  display: inline-block;
-}
-.brandListOff{
   display: none;
 }
 

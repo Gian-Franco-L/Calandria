@@ -32,7 +32,7 @@ export default function ProfileCartIcons({ navbarscrollStatus }: pageTypes){
 
   return(
   <>
-    <div className={ProfileCartIconsStyles.mainContainer} onMouseLeave={signRegisterDesapear}>
+    <div className={ProfileCartIconsStyles.mainContainer}>
       <section onMouseEnter={signRegisterApear} className={ProfileCartIconsStyles.profileIconContainer}>
         <GoPerson className={ProfileCartIconsStyles.profileIcon}/>
         <div className={`${ProfileCartIconsStyles.signOrRegister} ${ProfileCartIconsStyles[signOrRegisterStatus]} ${ProfileCartIconsStyles[navbarscrollStatus]}`} onMouseLeave={signRegisterDesapear}>

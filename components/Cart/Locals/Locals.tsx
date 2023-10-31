@@ -9,14 +9,24 @@ export default function Locals(){
         <PiStorefrontDuotone className={LocalStyles.storeIcon} />
         <p>Nuestros locales</p>
       </div>
-      <button className={LocalStyles.location}>
+      <div className={LocalStyles.formRadios}>
+        <label>
+          <input type="radio" name="e" />
+          <div><span>Localización numero uno.</span><span>Gratis</span></div>
+        </label>
+        <label>
+          <input type="radio" name="e" />
+          <div><span>Localización numero dos.</span><span>Gratis</span></div>
+        </label>
+      </div>
+      {/* <button className={LocalStyles.location}>
         <p>Localización numero uno.</p>
         <h3>Gratis</h3>
       </button>
       <button className={LocalStyles.location}>
         <p>Localización numero dos.</p>
         <h3>Gratis</h3>
-      </button>
+      </button> */}
     </section>
   )
 }

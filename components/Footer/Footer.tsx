@@ -73,8 +73,6 @@ export default function Footer(){
       </section>
       <section className={FooterStyles.shippingContainer}>
         <div className={FooterStyles.shippingSection}>
-          <span><Image src={oca} width={64} height={32} alt="oca"/></span>
-          <span><Image src={mercadoEnvios} width={64} height={32} alt="mercadoEnvios"/></span>
           <span><Image src={correoArgentino} width={64} height={32} alt="correoArgentino"/></span>
         </div>
       </section>
