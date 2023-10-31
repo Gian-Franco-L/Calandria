@@ -4,6 +4,7 @@ import productService from "../../services/product"
 import Items from "./Items/Items"
 import Locals from "./Locals/Locals"
 import Shipping from "./Shipping/Shipping"
+import { MdOutlineCancel } from "react-icons/md"
 import { v4 as uuidv4 } from "uuid"
 
 interface pageTypes{
@@ -38,7 +39,7 @@ export default function Cart({cartStatus, setCartStatus}: pageTypes){
     <div className={`${CartStyles.cartContainer} ${CartStyles[cartItemsStatus]}`}>
       <div className={CartStyles.tittle}>
         <h1>Carrito de compras</h1>
-        <button className={CartStyles.closeCartButton} onClick={() => setCartStatus("off")}>X</button>
+        <button className={CartStyles.closeCartButton} onClick={() => setCartStatus("off")}><MdOutlineCancel className={CartStyles.closeCartIcon}/></button>
       </div>
       <div className={CartStyles.cartArticles}>
         {
@@ -62,7 +63,7 @@ export default function Cart({cartStatus, setCartStatus}: pageTypes){
       <div className={CartStyles.greyBar}/>
       <a href="/purchaseForm">
         <button className={CartStyles.finishBuy}>
-          <p>Finalizar Compra</p>
+          <h5>Finalizar Compra</h5>
         </button>
       </a>
     </div>

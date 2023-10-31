@@ -4,12 +4,14 @@
   top: 0%;
   height: 100%;
   width: 500px;
+  padding-left: 1%;
+  padding-right: 1.5%;
   background-color: white;
   overflow-y: scroll;
   overflow: auto;
   padding-bottom: 1%;
+  box-shadow: 0px 0px 5px .1px #a4304d;
 }
-
 
 .openCart{
   animation-name: openCartMovement;
@@ -42,54 +44,68 @@
 }
 
 .tittle{
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   width: 100%;
+  left: 0;
   color: white;
-  background-color: black;
+  text-shadow: 0px 0px 1px white;
+  background-color: #3b151f;
 }
 
 .closeCartButton{
   position: absolute;
-  height: 25px;
-  width: 25px;
-  right: 7%;
-  font-size: 1.3rem;
+  height: 50px;
+  width: 50px;
+  right: 3%;
+  font-size: 2rem;
   color: white;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
+.closeCartButton:hover{
+  color: #a4304d;
+}
 
 .cartArticles{
   display: flex;
   flex-direction: column;
+  width: 95%;
+  margin-left: 2.5%;
   max-height: 40%;
-  margin-top: 5%;
-  padding: 2%;
+  margin-top: 15%;
+  padding-top: 2%;
+  border-radius: 10px;
+  background-color: rgb(230, 230, 230);
+  border: 2px solid rgb(80, 80, 80);
+  box-shadow: 0px 0px 1px 1px rgb(80, 80, 80);
   overflow-y: scroll;
   overflow: auto;
 }
 .cartArticles::-webkit-scrollbar {
   display: none;
 }
+.cartArticles:hover{
+  border: 2px solid #a4304d;
+  box-shadow: 0px 0px 1px 1px #a4304d;
+}
 
 .greyBar{
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: 2%;
-  border: 1px solid rgba(0, 0, 0, 0.214);
-  width: 93%;
+  width: 100%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  border: 1px solid #a4304d;
 }
 
 .price{
   display: flex;
   justify-content: space-between;
-  width: 95%;
-  padding-left: 3%;
-  padding-right: 2%;
+  width: 93%;
+  margin-left: 3.5%;
 }
 .price p{
   font-size: 1.5rem;
@@ -97,18 +113,18 @@
 
 .finishBuy{
   height: 5%;
-  width: 93%;
-  margin-left: 2%;
+  width: 100%;
   border-radius: 10px;
   border: none;
-  background-color: black;
-  color: white;
   font-size: 1.5rem;
   cursor: pointer;
+  background-color: white;
+  border: 2px solid rgb(80, 80, 80);
+  box-shadow: 0px 0px 1px 1px rgb(80, 80, 80);
 }
 .finishBuy:hover{
-  background-color: white;
-  color: black;
+  border: 2px solid #a4304d;
+  box-shadow: 0px 0px 1px 1px #a4304d;
 }
 
 @media (width <= 991px){

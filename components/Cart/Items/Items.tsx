@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 import ItemCant from "./ItemCant/ItemCant"
 import CartItemsStyles from "../../../styles/Cart/CartItems.module.css"
 import { BsTrash } from "react-icons/bs"
@@ -17,7 +18,12 @@ interface pageTypes{
 export default function Items({ item }: pageTypes){
   return(
     <div className={CartItemsStyles.item}>
-      <img src={item.Img} alt="" />
+      <Image
+        src={item.Img}
+        alt=""
+        width={500}
+        height={500}
+      />
       <div className={CartItemsStyles.itemNameCant}>
         <p>{item.Name}</p>
         <ItemCant />

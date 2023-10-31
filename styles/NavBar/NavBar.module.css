@@ -5,8 +5,7 @@
   flex-wrap: wrap;
   width: 100%;
   top: 0;
-  background-color: white;
-  border-bottom: 1px solid #9d9d9d;
+  border-bottom: 1px solid white;
   transition-duration: .5s;
 }
 
@@ -15,4 +14,37 @@
 }
 .smallNavBar{
   height: 100px;
+}
+
+.logo{
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  left: 8%;
+  transition: 1s;
+}
+
+.normalLogo{
+  width: 15%;
+}
+.smallLogo{
+  width: 10%;
+}
+
+@media (width < 991px){
+  .logo{
+    z-index: 1;
+    position: absolute;
+    height: 50%;
+    left: 30%;
+    transition: 1s;
+  }
+
+  .normalLogo{
+    width: 40%;
+  }
+  .smallLogo{
+    width: 30%;
+    left: 35%;
+  }
 }

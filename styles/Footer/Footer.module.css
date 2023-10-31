@@ -106,7 +106,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 25%;
 }
 .shippingSection span{
   padding: 4px;

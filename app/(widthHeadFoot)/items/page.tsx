@@ -31,7 +31,7 @@ export default async function Items(){
         </article>
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>
-        <CategoriesFilters />
+        {/* <CategoriesFilters /> */}
         <Filter />
       </section>
       <section className={ArticlesStyles.categoriesAndItems}>

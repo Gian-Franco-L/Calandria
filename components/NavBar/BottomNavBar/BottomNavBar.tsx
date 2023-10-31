@@ -2,7 +2,7 @@
 import React from "react"
 import Link from "next/link"
 import BottomNavBarStyles from "../../../styles/NavBar/BottomNavBar.module.css"
-import { GrFormDown } from "react-icons/gr"
+import { IoIosArrowDown } from "react-icons/io"
 import useApearProductsBrandsLists from "../../../hooks/useApearProductsBrandsLists"
 import Search from "@/components/Search/Search"
 
@@ -14,11 +14,11 @@ export default function BottomNavBar(){
 
   return(
     <>
-      <div className={BottomNavBarStyles.mainContainerPc} onMouseLeave={() => (productsListDesapear())}>
+      <div className={BottomNavBarStyles.mainContainerPc}>
         <ul className={BottomNavBarStyles.navList}>
-          <li>
-            <div onMouseEnter={() => (productsListApear())}>
-              <Link href="/">Productos<GrFormDown /></Link>
+          <li onMouseEnter={productsListApear}>
+            <div style={{textAlign: 'center'}}>
+              <Link href="/">Productos<IoIosArrowDown className={BottomNavBarStyles.arrowDown}/></Link>
             </div>
             <ul className={`${BottomNavBarStyles.productsList} ${BottomNavBarStyles[productListStatus]}`} onMouseLeave={productsListDesapear}>
               <div className={BottomNavBarStyles.productSection}>
@@ -114,10 +114,10 @@ export default function BottomNavBar(){
               </div>
             </ul>
           </li>
-          <li onMouseLeave={() => (productsListDesapear())}>
+          <li style={{textAlign: 'center'}}>
             <Link href="/contact">Contacto</Link>
           </li>
-          <li onMouseLeave={() => (productsListDesapear())}>
+          <li style={{textAlign: 'center'}}>
             <Link href="#">Ofertas</Link>
           </li>
         </ul>

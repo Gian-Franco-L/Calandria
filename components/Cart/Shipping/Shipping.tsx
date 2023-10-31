@@ -29,7 +29,7 @@ export default function Shipping(){
                       onChange={({target}) => setPostal(target.value)}
                       required
                     />
-                    <button type="button" onClick={() => postal && setPostalStatus("on")}>Calcular</button>
+                    <button type="button" onClick={() => postal && setPostalStatus("on")}><h5>Calcular</h5></button>
                   </form>
                   <a href="https://www.correoargentino.com.ar/formularios/cpa" target="blank">Como puedo saber mi codigo postal?</a>
                 </>
@@ -39,28 +39,41 @@ export default function Shipping(){
             &&  <>
                   <div className={ShippingStyles.postalChange}>
                     <p>Codigo postal: {postal}</p>
-                    <button onClick={() => (setPostalStatus("off"), setPostal(""))}>Cambiar cp</button>
+                    <button onClick={() => (setPostalStatus("off"), setPostal(""))}><h5>Cambiar cp</h5></button>
                   </div>
                   <div className={ShippingStyles.locationAndTittle}>
                   <BsTruck className={ShippingStyles.locationIcon}/>
                   <p>Envio a domicilio</p>
                 </div>
-                  <button className={ShippingStyles.location}>
+                  <div className={ShippingStyles.formRadios}>
+                    <label><input type="radio" name="e" /> Envio standard.</label>
+                  </div>
+                  {/* <button className={ShippingStyles.location}>
                     <p>Envio standard.</p>
                     <h3>$0000,00</h3>
-                  </button>
+                  </button> */}
                   <div className={ShippingStyles.locationAndTittle}>
                     <TfiLocationPin className={ShippingStyles.locationIcon}/>
                     <p>Retirar por</p>
                   </div>
-                  <button className={ShippingStyles.location}>
+                  <div className={ShippingStyles.formRadios}>
+                    <label>
+                      <input type="radio" name="e" />
+                      <div><span>Punto de retiro numero uno.</span><span>$0000,00</span></div>
+                    </label>
+                    <label>
+                      <input type="radio" name="e" />
+                      <div><span>Punto de retiro numero dos.</span><span>$0000,00</span></div>
+                    </label>
+                  </div>
+                  {/* <button className={ShippingStyles.location}>
                     <p>Punto de retiro numero uno.</p>
                     <h3>$0000,00</h3>
                   </button>
                   <button className={ShippingStyles.location}>
                     <p>Punto de retiro numero dos.</p>
                     <h3>$0000,00</h3>
-                  </button>
+                  </button> */}
                 </>
         }
       </section>
