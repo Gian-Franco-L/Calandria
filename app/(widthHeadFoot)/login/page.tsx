@@ -15,14 +15,14 @@ export default function LogIn(){
       <h1>Iniciar sesión</h1>
       <form action="" method="POST">
           <div>
-              <label htmlFor="mail"><p>Email</p></label>
-              <input name="mail" type="email" id="mail" required />
+              <label htmlFor="mail" />
+              <input name="mail" type="email" id="mail" placeholder="Email" required />
           </div>
           <div>
-              <label htmlFor="password"><p>Contraseña</p></label>
-              <input name="password" type="password" id="password" required />
+              <label htmlFor="password" />
+              <input name="password" type="password" id="password" placeholder="Contraseña" required />
           </div>
-          <Link href="/profile"><button type="submit"><p>Crear cuenta</p></button></Link>
+          <button type="submit">Crear cuenta</button>
       </form>
       <div className={LogInStyles.passwordAlready}>
         <Link href="/recovery"><p>¿Olvidaste tu contraseña?</p></Link>

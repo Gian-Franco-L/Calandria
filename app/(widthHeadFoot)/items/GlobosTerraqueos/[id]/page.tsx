@@ -50,13 +50,17 @@ export default function item({ params }: pageTypes){
             <p>Item</p>
           </div>
           <h1>Nombre del articulo</h1>
-          <h3>$0000,00</h3>
-          <h4>Disponibilidad: Muchas/Pocas/Numero exacto</h4>
-          <h4>Categoria: xxxxxxxx</h4>
-          <h4>Marca: xxxxxx</h4>
-          <section style={{display: 'flex', alignItems: 'center'}}>
-            <ItemCant />
-            <button style={{height: '30px', marginLeft: '50px', cursor: 'pointer'}}>Agregar al carrito</button>
+          <h3><span>Precio:</span> $0000,00</h3>
+          <h4><span>Disponibilidad:</span> Muchas/Pocas/Numero exacto</h4>
+          <h4><span>Categoria:</span> xxxxxxxx</h4>
+          <h4><span>Marca:</span> xxxxxx</h4>
+          <section>
+            <div className={ItemStyles.itemCant}>
+              <button>-</button>
+              <p>1</p>
+              <button>+</button>
+            </div>
+            <button className={ItemStyles.finishBuy}>Agregar al carrito</button>
           </section>
         </article>
       </div>

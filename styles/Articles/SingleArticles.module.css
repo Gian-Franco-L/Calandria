@@ -1,4 +1,6 @@
 .mainContainer{
+  --p: #a4304d;
+  --s: #3b151f;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -38,13 +40,14 @@
 
 .mainContainer:hover section{
   display: flex;
+  border-radius: 10px;
   flex-direction: column;
   position: absolute;
   align-items: center;
   justify-content: flex-end;
   height: 100%;
   width: 100%;
-  box-shadow: 0px 0px 10px 2px rgb(225, 225, 225);
+  box-shadow: 0px 0px 10px 2px var(--s);
   transition: .5s;
 }
 .mainContainer:hover section a{

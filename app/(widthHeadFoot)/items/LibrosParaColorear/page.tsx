@@ -4,7 +4,7 @@ import ArticlesContainer from "@/components/ArticlesContainer/ArticlesContainer"
 import ArticlesStyles from "@/styles/Articles/Articles.module.css"
 import CategoriesFilters from "@/components/CategoriesFilters/CategoriesFilters";
 import { fetchArticles } from "@/actions/fetchArticles";
-import Filter from "@/components/Filter/Filter";
+import PriceTimeFilter from "@/components/PriceTimeFilter/PriceTimeFilter";
 import FiltersCheckbox from "@/components/FiltersCheckbox/FiltersCheckbox";
 
 export default async function LibrosParaColorear(){
@@ -22,7 +22,7 @@ export default async function LibrosParaColorear(){
           <p>Libros para colorear</p>
         </article>
         <article>
-          <Filter />
+          <PriceTimeFilter />
         </article>
       </section>
       <section className={ArticlesStyles.homeMobile}>
@@ -36,7 +36,7 @@ export default async function LibrosParaColorear(){
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>
         <CategoriesFilters />
-        <Filter />
+        <PriceTimeFilter />
       </section>
       <section className={ArticlesStyles.categoriesAndItems}>
         <article className={ArticlesStyles.categories}>

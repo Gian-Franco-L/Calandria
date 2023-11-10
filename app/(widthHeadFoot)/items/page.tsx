@@ -4,7 +4,7 @@ import ArticlesContainer from "@/components/ArticlesContainer/ArticlesContainer"
 import ArticlesStyles from "@/styles/Articles/Articles.module.css"
 import CategoriesFilters from "@/components/CategoriesFilters/CategoriesFilters";
 import { fetchArticles } from "@/actions/fetchArticles";
-import Filter from "@/components/Filter/Filter";
+import PriceTimeFilter from "@/components/PriceTimeFilter/PriceTimeFilter";
 import FiltersCheckbox from "@/components/FiltersCheckbox/FiltersCheckbox";
 
 export default async function Items(){
@@ -20,7 +20,7 @@ export default async function Items(){
           <p>Productos</p>
         </article>
         <article>
-          <Filter />
+          <PriceTimeFilter />
         </article>
       </section>
       <section className={ArticlesStyles.homeMobile}>
@@ -31,36 +31,39 @@ export default async function Items(){
         </article>
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>
-        {/* <CategoriesFilters /> */}
-        <Filter />
+        <CategoriesFilters />
+        <PriceTimeFilter />
       </section>
-      <section className={ArticlesStyles.categoriesAndItems}>
-        <article className={ArticlesStyles.categories}>
+      <div className={ArticlesStyles.categoriesAndItems}>
+        <div className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
-          <Link href="/items/VueltaAlCole">Vuelta al cole</Link>
-          <Link href="/items/Escritura">Escritura</Link>
-          <Link href="/items/LibrosParaColorear">Libros para colorear</Link>
-          <Link href="/items/Carpetas">Carpetas</Link>
-          <Link href="/items/Cuadernos">Cuadernos</Link>
-          <Link href="/items/Agendas">Agendas</Link>
-          <Link href="/items/Calculadoras">Calculadoras</Link>
-          <Link href="/items/Arte">Arte</Link>
-          <Link href="/items/Geometria">Geometría</Link>
-          <Link href="/items/Adhesivos">Adhesivos</Link>
-          <Link href="/items/Hojas">Hojas</Link>
-          <Link href="/items/PapelesYCartones">Papeles y cartones</Link>
-          <Link href="/items/Pizarras">Pizarras</Link>
-          <Link href="/items/Tableros">Tableros</Link>
-          <Link href="/items/Bastidores">Bastidores</Link>
-          <Link href="/items/Masas">Masas</Link>
-          <Link href="/items/GlobosTerraqueos">Globos terráqueos</Link>
-          <Link href="/items/Cortantes">Cortantes</Link>
-          <Link href="/items/BateriasYPilas">Baterias y pilas</Link>
-          <Link href="/items/UnPocoDeTodo">Un poco de todo</Link>
+          <div className={ArticlesStyles.linksBorder}>
+            <Link href="/items/VueltaAlCole">Vuelta al cole</Link>
+            <Link href="/items/Escritura">Escritura</Link>
+            <Link href="/items/LibrosParaColorear">Libros para colorear</Link>
+            <Link href="/items/Carpetas">Carpetas</Link>
+            <Link href="/items/Cuadernos">Cuadernos</Link>
+            <Link href="/items/Agendas">Agendas</Link>
+            <Link href="/items/Calculadoras">Calculadoras</Link>
+            <Link href="/items/Arte">Arte</Link>
+            <Link href="/items/Geometria">Geometría</Link>
+            <Link href="/items/Adhesivos">Adhesivos</Link>
+            <Link href="/items/Hojas">Hojas</Link>
+            <Link href="/items/PapelesYCartones">Papeles y cartones</Link>
+            <Link href="/items/Pizarras">Pizarras</Link>
+            <Link href="/items/Tableros">Tableros</Link>
+            <Link href="/items/Bastidores">Bastidores</Link>
+            <Link href="/items/Masas">Masas</Link>
+            <Link href="/items/GlobosTerraqueos">Globos terráqueos</Link>
+            <Link href="/items/Cortantes">Cortantes</Link>
+            <Link href="/items/BateriasYPilas">Baterias y pilas</Link>
+            <Link href="/items/Fantasia">Fantasia</Link>
+            <Link href="/items/UnPocoDeTodo">Otros</Link>
+          </div>
           <FiltersCheckbox />
-        </article>
+        </div>
         <ArticlesContainer initialArticles={initialArticles}/>
-      </section>
+      </div>
     </div>
   )
 }

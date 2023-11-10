@@ -11,27 +11,30 @@
 
 .homeLink{
   position: absolute;
-  top: -50px;
   display: flex;
+  top: -50px;
+  font-size: 1.5rem;
+}
+.homeLink p{
+  font-size: 1.5rem;
 }
 .homeLink a{
-  color: rgb(79, 79, 79);
+  font-weight: bold;
+  color: #3b151f;
   text-decoration: none;
 }
 .homeLink a:hover{
-  color: rgb(136, 136, 136);
+  color: #a4304d;
   text-decoration: none;
-}
-.homeLink p{
-  font-size: 1rem;
 }
 
 .articlesTotal{
   position: relative;
   width: 600px;
   height: 100%;
-  border: 1px solid black;
+  border: 3px solid #3b151f;
   padding: 10px;
+  background-color: white;
 }
 
 .cartArticles{
@@ -50,6 +53,19 @@
 .formInfomation{
   width: 600px;
   margin-left: 2%;
+}
+.formInfomation input{
+  height: 40px;
+  border: 3px solid #3b151f;
+  border-radius: 10px;
+  padding-left: 10px;
+  outline: none;
+}
+.formInfomation input:hover{
+  border: 3px solid #a4304d;
+}
+.formInfomation input:focus{
+  border: 3px solid #a4304d;
 }
 
 .shipping{
@@ -85,6 +101,52 @@
 
 .flexBetween{
   display: flex;
+  justify-content: space-between;
+}
+
+.otherPerson{
+  display: flex;
+  margin-top: 2%;
+}
+.otherPerson input[type=checkbox]{
+  --s: 1.5em;
+  --c: #a4304d;
+  height: var(--s);
+  aspect-ratio: 1;
+  border: calc(var(--s)/8) solid #939393;
+  padding: calc(var(--s)/8);
+  background: radial-gradient(farthest-side,var(--c) 94%,#0000) 50%/0 0 no-repeat content-box;
+  border-radius: 50%;
+  outline-offset: calc(var(--s)/10);
+  appearance: none;
+  cursor: pointer;
+  font-size: inherit;
+  transition: .3s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.otherPerson input[type=checkbox]:checked{
+  border-color: var(--c);
+  background-size: 100% 100%;
+}
+
+.otherPerson input[type=checkbox]:disabled{
+  background: 
+     linear-gradient(#939393 0 0) 
+     50%/100% 20% no-repeat content-box;
+  opacity: .5;
+  cursor: not-allowed;
+}
+.otherPerson label {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:5px 0;
+  cursor: pointer;
+}
+.otherPerson label div{
+  display: flex;
+  width: 100%;
   justify-content: space-between;
 }
 

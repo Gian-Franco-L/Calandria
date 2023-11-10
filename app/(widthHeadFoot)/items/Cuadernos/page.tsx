@@ -4,7 +4,7 @@ import ArticlesContainer from "@/components/ArticlesContainer/ArticlesContainer"
 import ArticlesStyles from "@/styles/Articles/Articles.module.css"
 import CategoriesFilters from "@/components/CategoriesFilters/CategoriesFilters";
 import { fetchArticles } from "@/actions/fetchArticles";
-import Filter from "@/components/Filter/Filter";
+import PriceTimeFilter from "@/components/PriceTimeFilter/PriceTimeFilter";
 import FiltersCheckbox from "@/components/FiltersCheckbox/FiltersCheckbox";
 
 export default async function VueltaAlCole(){
@@ -22,7 +22,7 @@ export default async function VueltaAlCole(){
           <p>Carpetas</p>
         </article>
         <article>
-          <Filter />
+          <PriceTimeFilter />
         </article>
       </section>
       <section className={ArticlesStyles.homeMobile}>
@@ -36,27 +36,29 @@ export default async function VueltaAlCole(){
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>
         <CategoriesFilters />
-        <Filter />
+        <PriceTimeFilter />
       </section>
       <section className={ArticlesStyles.categoriesAndItems}>
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
-          <Link href="#">Lápices</Link>
-          <Link href="#">- Colores</Link>
-          <Link href="#">- Sacapuntas</Link>
-          <Link href="#">- Goma de borrar</Link>
-          <Link href="#">Boligrafos</Link>
-          <Link href="#">- Repuestos</Link>
-          <Link href="#">Marcadores</Link>
-          <Link href="#">Resaltadores</Link>
-          <Link href="#">Roller</Link>
-          <Link href="#">- Gel</Link>
-          <Link href="#">- Ball</Link>
-          <Link href="#">Microfibras</Link>
-          <Link href="#">Correctores</Link>
-          <Link href="#">Crayones</Link>
-          <Link href="#">Portaminas</Link>
-          <Link href="#">- Minas</Link>
+          <div className={ArticlesStyles.linksBorder}>
+            <Link href="#">Lápices</Link>
+            <Link href="#">- Colores</Link>
+            <Link href="#">- Sacapuntas</Link>
+            <Link href="#">- Goma de borrar</Link>
+            <Link href="#">Boligrafos</Link>
+            <Link href="#">- Repuestos</Link>
+            <Link href="#">Marcadores</Link>
+            <Link href="#">Resaltadores</Link>
+            <Link href="#">Roller</Link>
+            <Link href="#">- Gel</Link>
+            <Link href="#">- Ball</Link>
+            <Link href="#">Microfibras</Link>
+            <Link href="#">Correctores</Link>
+            <Link href="#">Crayones</Link>
+            <Link href="#">Portaminas</Link>
+            <Link href="#">- Minas</Link>
+          </div>
           <FiltersCheckbox />
         </article>
         <ArticlesContainer initialArticles={initialArticles}/>

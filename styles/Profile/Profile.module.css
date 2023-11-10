@@ -1,46 +1,73 @@
 .mainContainer{
-  margin-top: 200px;
+  --p: #a4304d;
+  --s: #3b151f;
+  --t: rgb(80, 80, 80);
+  --b: rgb(230, 230, 230);
+  margin-top: 180px;
 }
 .mainContainer h1{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
+  color: white;
+  background-color: var(--s);
 }
 
 .profileContainer{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 100px;
 }
 
 .profileInfo{
-  position: relative;
+  height: 100%;
+}
+.profileInfo div{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  border: 1px solid black;
+  justify-content: space-around;
+  border: 3px solid var(--s);
+  border-top: none;
   width: 400px;
   height: 180px;
+  background-color: white;
+}
+.profileInfo div:hover{
+  border: 3px solid var(--p);
+  border-top: none;
 }
 .profileInfo h4{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
   text-align: center;
+  background-color: var(--s);
 }
 .profileInfo h5{
   margin-left: 10px;
 }
 
 .links{
-  position: absolute;
   display: flex;
-  top: -100px;
-  margin-bottom: 50px;
+  justify-content: center;
+  margin-bottom: 35px;
+  font-size: 1.5rem;
+}
+.links p{
+  font-size: 1.5rem;
 }
 .links a{
-  color: rgb(79, 79, 79);
+  font-weight: bold;
+  color: var(--s);
   text-decoration: none;
 }
 .links a:hover{
-  color: rgb(136, 136, 136);
+  color: var(--p);
   text-decoration: none;
 }
 
@@ -48,14 +75,28 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid black;
   border-bottom: none;
   width: 1000px;
 }
+.purchases h4{
+  color: white;
+  text-align: center;
+  background-color: var(--s);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.purchases:hover .totalContainer h5{
+  border-top: 3px solid var(--p);
+  border-left: 3px solid var(--p);
+}
 
-.purchases div{
-  margin-left: 10px;
-  margin-right: 10px;
+.purchaseBorder{
+  border: 3px solid var(--s);
+  border-top: none;
+}
+.purchaseBorder:hover{
+  border: 3px solid var(--p);
+  border-top: none;
 }
 
 .totalContainer{
@@ -63,11 +104,11 @@
   justify-content: right;
   align-items: bottom;
   width: 100%;
-  border-bottom: 1px solid black;
+  background-color: white;
 }
 .totalContainer h5{
-  border-top: 1px solid black;
-  border-left: 1px solid black;
+  border-top: 3px solid var(--s);
+  border-left: 3px solid var(--s);
 }
 
 @media (width <= 1414px){

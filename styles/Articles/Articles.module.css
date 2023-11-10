@@ -18,12 +18,14 @@
 
 .homeLink{
   display: flex;
+  font-size: 1.5rem;
 }
 .homeLink p{
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .homeLink a{
-  color: rgb(79, 79, 79);
+  font-weight: bold;
+  color: #3b151f;
   text-decoration: none;
 }
 .homeLink a:hover{
@@ -40,9 +42,6 @@
   width: 90%;
   margin-bottom: 30px;
 }
-.categoriesAndFilersMobile article{
-  width: 30%;
-}
 .categoriesAndFilersMobile select{
   height: 25px;
   border: 1px solid black;
@@ -50,31 +49,50 @@
 
 
 .categoriesAndItems{
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   margin-top: 4%;
 }
 
 .categories{
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  width: 15%;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
 }
 .categories a{
   text-decoration: none;
   color: black;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 8%;
 }
 .categories a:hover{
   color: #a4304d;
 }
-.categories h3:nth-of-type(2){
-  margin-top: 50px;
+.categories h3{
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+  color: white;
+  background-color: #3b151f;
 }
-.categories p{
-  margin-top: 20px;
+
+.linksBorder{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #3b151f;
+  border-top: none;
+  border-bottom: none;
 }
-.categories p input{
-  margin-right: 10px;
+.linksBorder:hover{
+  border: 2px solid #a4304d;
+  border-top: none;
+  border-bottom: none;
 }
 
 @media (width <= 830px){

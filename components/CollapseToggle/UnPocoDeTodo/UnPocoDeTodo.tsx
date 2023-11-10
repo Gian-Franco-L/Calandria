@@ -8,7 +8,7 @@ import CollapseToggleStyle from "@/styles/CollapseToggle/CollapseToggle.module.c
 interface PageTypes{
   option: string
 }
-export default function Otros({ option } : PageTypes) {
+export default function UnPocoDeTodo({ option } : PageTypes) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ export default function Otros({ option } : PageTypes) {
         onClick={() => setOpen(!open)}
         aria-controls="example-collapse-text"
         aria-expanded={open}
-        style={{width: '100%', color: 'black', textAlign: 'left', backgroundColor: 'transparent', borderRadius: '0px', borderTop: '1px solid black', borderBottom: 'none', borderRight: 'none', borderLeft: 'none', paddingLeft: '5%'}}
+        style={{width: '100%', color: 'black', textAlign: 'left', backgroundColor: 'transparent', borderRadius: '0px', borderTop: '2px solid #3b151f', borderBottom: 'none', borderRight: 'none', borderLeft: 'none', paddingLeft: '5%'}}
       >
         | {option}
       </Button>
@@ -32,7 +32,8 @@ export default function Otros({ option } : PageTypes) {
           <Link className={CollapseToggleStyle.itemCollapse} href="/">- Globos terráqueos</Link>
           <Link className={CollapseToggleStyle.itemCollapse} href="/">- Cortantes</Link>
           <Link className={CollapseToggleStyle.itemCollapse} href="/">- Baterias y pilas</Link>
-          <Link className={CollapseToggleStyle.itemCollapse} href="/">- Un poco de todo</Link>
+          <Link className={CollapseToggleStyle.itemCollapse} href="/">- Fantasia</Link>
+          <Link className={CollapseToggleStyle.itemCollapse} href="/">- Otros</Link>
         </div>
       </Collapse>
     </>

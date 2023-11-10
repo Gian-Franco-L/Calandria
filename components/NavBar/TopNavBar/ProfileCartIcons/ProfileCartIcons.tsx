@@ -12,7 +12,7 @@ interface pageTypes{
 }
 export default function ProfileCartIcons({ navbarscrollStatus }: pageTypes){
 
-  const { apearSignRegister, signRegisterApear, signRegisterDesapear } = useApearSignRegister()
+  const { SignRegister, setSignRegister } = useApearSignRegister()
   const { cartStatus, setCartStatus, cartStatusRef } = useCartStatus()
 
   // useEffect(() =>{
@@ -28,14 +28,14 @@ export default function ProfileCartIcons({ navbarscrollStatus }: pageTypes){
   //   }
   // }, [cartStatus])
 
-  const signOrRegisterStatus = apearSignRegister === "on" ? "signOrRegisteOn" : "signOrRegisteOff"
+  const signOrRegisterStatus = SignRegister === "on" ? "signOrRegisteOn" : "signOrRegisteOff"
 
   return(
   <>
     <div className={ProfileCartIconsStyles.mainContainer}>
-      <section onMouseEnter={signRegisterApear} className={ProfileCartIconsStyles.profileIconContainer}>
+      <section onClick={() => setSignRegister(prevState => prevState === 'on' ? 'off' : 'on')} className={ProfileCartIconsStyles.profileIconContainer}>
         <GoPerson className={ProfileCartIconsStyles.profileIcon}/>
-        <div className={`${ProfileCartIconsStyles.signOrRegister} ${ProfileCartIconsStyles[signOrRegisterStatus]} ${ProfileCartIconsStyles[navbarscrollStatus]}`} onMouseLeave={signRegisterDesapear}>
+        <div className={`${ProfileCartIconsStyles.signOrRegister} ${ProfileCartIconsStyles[signOrRegisterStatus]} ${ProfileCartIconsStyles[navbarscrollStatus]}`}>
           <a href="/register">Registrarse</a>
           <a href="/login">Iniciar sesión</a>
         </div>

@@ -10,7 +10,6 @@
   overflow-y: scroll;
   overflow: auto;
   padding-bottom: 1%;
-  box-shadow: 0px 0px 5px .1px #a4304d;
 }
 
 .openCart{
@@ -79,26 +78,18 @@
   max-height: 40%;
   margin-top: 15%;
   padding-top: 2%;
-  border-radius: 10px;
-  background-color: rgb(230, 230, 230);
-  border: 2px solid rgb(80, 80, 80);
-  box-shadow: 0px 0px 1px 1px rgb(80, 80, 80);
   overflow-y: scroll;
   overflow: auto;
 }
 .cartArticles::-webkit-scrollbar {
   display: none;
 }
-.cartArticles:hover{
-  border: 2px solid #a4304d;
-  box-shadow: 0px 0px 1px 1px #a4304d;
-}
 
 .greyBar{
   width: 100%;
   margin-top: 6%;
   margin-bottom: 6%;
-  border: 1px solid #a4304d;
+  border: 1px solid #3b151f;
 }
 
 .price{
@@ -111,20 +102,24 @@
   font-size: 1.5rem;
 }
 
-.finishBuy{
-  height: 5%;
+.finishBuyContainer{
+  display: flex;
+  justify-content: center;
+  height: 50px;
   width: 100%;
-  border-radius: 10px;
+  text-decoration: none;
+}
+
+.finishBuy{
+  width: 50%;
   border: none;
   font-size: 1.5rem;
+  color: white;
+  background-color: #3b151f;
   cursor: pointer;
-  background-color: white;
-  border: 2px solid rgb(80, 80, 80);
-  box-shadow: 0px 0px 1px 1px rgb(80, 80, 80);
 }
 .finishBuy:hover{
-  border: 2px solid #a4304d;
-  box-shadow: 0px 0px 1px 1px #a4304d;
+  transform: scale(1.05);
 }
 
 @media (width <= 991px){

@@ -61,7 +61,7 @@ export default function Cart({cartStatus, setCartStatus}: pageTypes){
       <div className={CartStyles.greyBar}/>
       <Locals />
       <div className={CartStyles.greyBar}/>
-      <a href="/purchaseForm">
+      <a href="/purchaseForm" className={CartStyles.finishBuyContainer}>
         <button className={CartStyles.finishBuy}>
           <h5>Finalizar Compra</h5>
         </button>

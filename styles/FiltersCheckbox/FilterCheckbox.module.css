@@ -1,12 +1,28 @@
+.inputs{
+  --f: 1.5em;
+  --p: #a4304d;
+  --s: #3b151f;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--s);
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.inputs:hover{
+  border: 2px solid var(--p);
+  border-top: none;
+}
+
 .inputs input[type=checkbox]{
-  --s: 1.5em;
-  --c: #a4304d;
-  height: var(--s);
+  height: var(--f);
   aspect-ratio: 1;
-  border: calc(var(--s)/8) solid #939393;
-  padding: calc(var(--s)/8);
-  background: radial-gradient(farthest-corner,var(--c) 94%,#0000) 50%/0 0 no-repeat content-box;
-  outline-offset: calc(var(--s)/10);
+  border: calc(var(--f)/8) solid #939393;
+  padding: calc(var(--f)/8);
+  background: radial-gradient(farthest-corner,var(--p) 94%,#0000) 50%/0 0 no-repeat content-box;
+  outline-offset: calc(var(--f)/10);
   appearance: none;
   cursor: pointer;
   font-size: inherit;
@@ -16,11 +32,11 @@
 }
 
 .inputs input[type=checkbox]:hover{
-  border-color: var(--c);
+  border-color: var(--p);
 }
 
 .inputs input[type=checkbox]:checked{
-  border-color: var(--c);
+  border-color: var(--p);
   background-size: 100% 100%;
 }
 
@@ -36,12 +52,26 @@
   display:flex;
   align-items:center;
   gap:10px;
-  margin:5px 0;
   cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 8%;
 }
 
 .inputs label div{
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+@media (width <= 991px){
+  .inputs{
+    margin-bottom: 130px;
+    position: relative;
+    border: none;
+    font-size: 1.2rem;
+  }
+  .inputs label {
+    padding-left: 0%;
+  }
 }

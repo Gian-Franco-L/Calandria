@@ -1,33 +1,12 @@
 'use client'
 
-import React, { useEffect, useState } from "react";
-// import { useRouter } from 'next/navigation';
-import filterStyles from '@/styles/Filter/filter.module.css'
+import React from "react";
+import priceTimeFilterStyles from '@/styles/PriceTimeFilter/priceTimeFilter.module.css'
 import { useSearchParams } from 'next/navigation'
-
-// export default function Filter(){
-
-//   const router = useRouter()
-
-//   const searchParams = useSearchParams()
-//   const searchType = searchParams.get('itemTypes')
-
-//   return(
-//     <select name="filter" onChange={event => router.push(`/items?filter=${event.target.value}${searchType !== null ? `&itemTypes=${searchType}` : ''}`)} className={filterStyles.filterSelect}>
-//       <option value="Precio<">Precio: Menor a mayor</option>
-//       <option value="Precio>">Precio: Mayor a menor</option>
-//       <option value="Tiempo>">Mas nuevo a mas viejo</option>
-//       <option value="Tiempo<">Mas viejo a mas nuevo</option>
-//       {/* <option value="+Vendido">Mas vendido</option> */}
-//     </select>
-//   )
-// }
-
-
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
-export default function Filter(){
+export default function PriceTimeFilter(){
 
   const searchParams = useSearchParams()
   let searchFilter = searchParams.get('filter')
@@ -38,7 +17,7 @@ export default function Filter(){
       : searchFilter === 'Precio>' ? 'Precio: Mayor a menor'
       : searchFilter === 'Tiempo>' ? 'Mas nuevo a mas viejo'
       : searchFilter === 'Tiempo<' ? 'Mas viejo a mas nuevo'
-      : 'Precio: Menor a mayor'} className={filterStyles.filterSelect}>
+      : 'Precio: Menor a mayor'} className={priceTimeFilterStyles.filterSelect}>
       <Dropdown.Item href="items?filter=Precio<">
         <p>Precio: Menor a mayor</p>
       </Dropdown.Item>

@@ -4,7 +4,7 @@ import ArticlesContainer from "@/components/ArticlesContainer/ArticlesContainer"
 import ArticlesStyles from "@/styles/Articles/Articles.module.css"
 import CategoriesFilters from "@/components/CategoriesFilters/CategoriesFilters";
 import { fetchArticles } from "@/actions/fetchArticles";
-import Filter from "@/components/Filter/Filter";
+import PriceTimeFilter from "@/components/PriceTimeFilter/PriceTimeFilter";
 import FiltersCheckbox from "@/components/FiltersCheckbox/FiltersCheckbox";
 
 export default async function VueltaAlCole(){
@@ -22,7 +22,7 @@ export default async function VueltaAlCole(){
           <p>Vuelta al cole</p>
         </article>
         <article>
-          <Filter />
+          <PriceTimeFilter />
         </article>
       </section>
       <section className={ArticlesStyles.homeMobile}>
@@ -36,22 +36,23 @@ export default async function VueltaAlCole(){
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>
         <CategoriesFilters />
-        <Filter />
+        <PriceTimeFilter />
       </section>
       <section className={ArticlesStyles.categoriesAndItems}>
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
-          <Link href="#">Mochilas</Link>
-          <Link href="#">- Jardin</Link>
-          <Link href="#">- Primaria</Link>
-          <Link href="#">- Secundaria</Link>
-          <Link href="#">- Moda urbana</Link>
-          <Link href="#">Cartucheras</Link>
-          <Link href="#">Bolsos y luncheras</Link>
-          <Link href="#">Botellas de agua</Link>
-          <Link href="#">Set de jardin personalizado</Link>
-          <Link href="#">Cintas identificadoras para ropa</Link>
-          <Link href="#">Uniforme San Cayetano</Link>
+          <div className={ArticlesStyles.linksBorder}>
+            <Link href="#">Mochilas</Link>
+            <Link href="#">- Jardin</Link>
+            <Link href="#">- Primaria</Link>
+            <Link href="#">- Secundaria</Link>
+            <Link href="#">- Moda urbana</Link>
+            <Link href="#">Cartucheras</Link>
+            <Link href="#">Bolsos y luncheras</Link>
+            <Link href="#">Set de jardin personalizado</Link>
+            <Link href="#">Cintas identificadoras para ropa</Link>
+            <Link href="#">Uniforme San Cayetano</Link>
+          </div>
           <FiltersCheckbox />
         </article>
         <ArticlesContainer initialArticles={initialArticles}/>
