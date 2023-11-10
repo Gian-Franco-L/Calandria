@@ -1,0 +1,37 @@
+.filterSelect button{
+  height: 40px;
+  color: black;
+  background-color: white;
+  border: 2px solid #3b151f;
+}
+.filterSelect button:hover{
+  color: black;
+  background-color: white;
+  border: 2px solid #a4304d;
+}
+
+.filterSelect button:active{
+  color: black;
+  background-color: white;
+  border: 2px solid #a4304d;
+}
+
+.filterSelect button:focus{
+  color: black;
+  background-color: white;
+  border: 2px solid #a4304d;
+}
+
+.filterSelect div{
+  z-index: 1;
+  width: 100%;
+  margin-top: 1%;
+  border: 2px solid #a4304d;
+}
+
+.filterSelect p:hover{
+  color: #a4304d;
+}
+.filterSelect a:hover{
+  background-color: transparent;
+}

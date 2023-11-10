@@ -29,6 +29,7 @@
   height: 20px;
   width: 20px;
   cursor: pointer;
+  color: #3b151f;
 }
 .trash:hover{
   transform: scale(1.2);

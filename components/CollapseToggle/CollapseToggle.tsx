@@ -13,7 +13,7 @@ import Geometria from './Geometria/Geometria';
 import Hojas from './Hojas/Hojas';
 import PapelesCartones from './PapelesCartones/PapelesCartones';
 import Pizarras from './Pizarras/Pizarras';
-import Otros from './Otros/Otros';
+import Otros from './UnPocoDeTodo/UnPocoDeTodo';
 
 interface PageTypes{
   option: string
@@ -27,7 +27,7 @@ export default function CollapseToggle({ option } : PageTypes) {
         onClick={() => setOpen(!open)}
         aria-controls="example-collapse-text"
         aria-expanded={open}
-        style={{width: '100%', color: 'black', textAlign: 'left', backgroundColor: 'transparent', borderRadius: '0px', borderTop: '1px solid black', borderBottom: 'none', borderRight: 'none', borderLeft: 'none' }}
+        style={{width: '100%', color: 'black', textAlign: 'left', backgroundColor: 'transparent', borderRadius: '0px', borderBottom: 'none', borderRight: 'none', borderLeft: 'none' }}
       >
         {option}
       </Button>

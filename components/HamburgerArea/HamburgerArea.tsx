@@ -4,6 +4,7 @@ import HamburgerAreaStyles from "@/styles/HamburgerArea/HamburgerArea.module.css
 import { GrFormDown } from "react-icons/gr"
 import { GoPerson } from "react-icons/go"
 import CollapseToggle from "../CollapseToggle/CollapseToggle";
+import SeparationBar from "./SeparationBar/SeparationBar";
 
 interface Pagetypes{
   hamburgerStatus: string,
@@ -24,13 +25,13 @@ export default function HamburgerArea({ hamburgerStatus, setHamburgerStatus }: P
         </div>
       </div>
       <div className={HamburgerAreaStyles.collapseOptions}>
-        <CollapseToggle option={"Productos"}/>
-        <div style={{width: '100%', borderTop: '1px solid black'}}></div>
+        <CollapseToggle option={"Productos"} />
+        <SeparationBar />
         <div className={HamburgerAreaStyles.collapseLinks}>
           <Link href="/contact">Contacto</Link>
-          <div style={{width: '100%', borderTop: '1px solid black'}}></div>
+          <SeparationBar />
           <Link href="/">Ofertas</Link>
-          <div style={{width: '100%', borderTop: '1px solid black'}}></div>
+          <SeparationBar />
         </div>
       </div>
     </div>

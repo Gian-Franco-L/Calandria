@@ -17,7 +17,7 @@ export default function VueltaAlColeCollapse({ option } : PageTypes) {
         onClick={() => setOpen(!open)}
         aria-controls="example-collapse-text"
         aria-expanded={open}
-        style={{width: '100%', color: 'black', textAlign: 'left', backgroundColor: 'transparent', borderRadius: '0px', borderTop: '1px solid black', borderBottom: 'none', borderRight: 'none', borderLeft: 'none', paddingLeft: '5%'}}
+        style={{width: '100%', color: 'black', textAlign: 'left', backgroundColor: 'transparent', borderRadius: '0px', borderTop: '2px solid #3b151f', borderBottom: 'none', borderRight: 'none', borderLeft: 'none', paddingLeft: '5%'}}
       >
         | {option}
       </Button>
@@ -30,7 +30,6 @@ export default function VueltaAlColeCollapse({ option } : PageTypes) {
           <Link className={CollapseToggleStyle.itemCollapse} href="/" style={{paddingLeft: '9%'}}>-- Moda urbana</Link>
           <Link className={CollapseToggleStyle.itemCollapse} href="/">-Cartucheras</Link>
           <Link className={CollapseToggleStyle.itemCollapse} href="/">-Bolsos y luncheras</Link>
-          <Link className={CollapseToggleStyle.itemCollapse} href="/">-Botallas de agua</Link>
           <Link className={CollapseToggleStyle.itemCollapse} href="/">-Set de jardin personalizados</Link>
           <Link className={CollapseToggleStyle.itemCollapse} href="/">-Cintas identificadoras para ropa</Link>
           <Link className={CollapseToggleStyle.itemCollapse} href="/">-Uniforme San Cayetano</Link>

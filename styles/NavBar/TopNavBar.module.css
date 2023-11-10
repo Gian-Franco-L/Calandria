@@ -2,7 +2,11 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+<<<<<<< HEAD
   background-color: #a4304d;
+=======
+  background-color: #3b151f;
+>>>>>>> dev
 }
 
 .searchInput{

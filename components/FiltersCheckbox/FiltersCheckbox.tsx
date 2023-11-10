@@ -36,7 +36,14 @@ export default function FiltersCheckbox(){
   }
 
   useEffect(() =>{
-    router.push(`http://localhost:3000/${pathname}?${searchFilter !== null ? `filter=${searchFilter}` : ''}${(checks[0].status && checks[1].status) ? '&itemTypes=Hogar|Niños': checks[0].status ? '&itemTypes=Hogar': checks[1].status ? '&itemTypes=Niños' : ''}`)
+    router.push(`http://localhost:3000/${pathname}?${searchFilter !== null ? `filter=${searchFilter}`: ''}
+    ${(checks[0].status && checks[1].status)
+        ? '&itemTypes=Hogar|Niños'
+        : checks[0].status
+          ? '&itemTypes=Hogar'
+          : checks[1].status
+            ? '&itemTypes=Niños'
+            : ''}`)
   }, [checks])
 
   return(
@@ -61,12 +68,15 @@ export default function FiltersCheckbox(){
         <label>
           <input type="checkbox" name="6" checked={checks[5].status === false ? false : true} onChange={() => handleChexbox('filter6')}/>6
         </label>
+<<<<<<< HEAD
         {/* <input type="checkbox" onChange={() => handleChexbox('Hogar')}/>
         <input type="checkbox" onChange={() => handleChexbox('Niños')}/>Niños
         <input type="checkbox" onChange={() => handleChexbox('filter3')}/>Filtro3
         <input type="checkbox" onChange={() => handleChexbox('filter4')}/>Filtro4
         <input type="checkbox" onChange={() => handleChexbox('filter5')}/>Filtro5
         <input type="checkbox" onChange={() => handleChexbox('filter6')}/>Filtro6 */}
+=======
+>>>>>>> dev
       </div>
     </>
   )

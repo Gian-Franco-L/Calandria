@@ -9,7 +9,7 @@ export default function CategoriesFilters(){
   const { categoriesStatus, setCategoriesStatus, categoriesStatusRef } = useCategoriesStatus()
 
   return(
-    <article>
+    <article className={CategoriesFilterStyles.filterMainContainer}>
       <button className={CategoriesFilterStyles.filterWord} onClick={() => setCategoriesStatus("on")}>
         Filtrar
       </button>

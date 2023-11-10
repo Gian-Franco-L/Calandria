@@ -13,27 +13,27 @@ export default function Register(){
         <p>Crear cuenta</p>
       </div>
       <h1>Crear una cuenta</h1>
-      <p className={RegisterStyles.explanation}>Con una cuenta tendras un historial de compras y se llenaran automaticamente algunos campos con tu informacion.</p>
+      <h6 className={RegisterStyles.explanation}>Con una cuenta tendras un historial de compras y se llenaran automaticamente algunos campos con tu informacion.</h6>
       <form action="" method="POST">
           <div>
-              <label htmlFor="name"><p>Nombre y apellido</p></label>
-              <input name="nombre" type="text" id="name" required/>
+              <label htmlFor="name" />
+              <input name="nombre" type="text" id="name" placeholder="Nombre y apellido" required/>
           </div>
           <div>
-              <label htmlFor="mail"><p>Email</p></label>
-              <input name="mail" type="email" id="mail" required />
+              <label htmlFor="mail" />
+              <input name="mail" type="email" id="mail" placeholder="Email" required />
           </div>
           <div>
-              <label htmlFor="phone"><p>Telefono</p></label>
-              <input name="phone" type="phone" id="phone" required />
+              <label htmlFor="phone" />
+              <input name="phone" type="phone" id="phone" placeholder="Telefono" required />
           </div>
           <div>
-              <label htmlFor="password"><p>Contraseña</p></label>
-              <input name="password" type="password" id="password" required />
+              <label htmlFor="password" />
+              <input name="password" type="password" id="password" placeholder="Contraseña" required />
           </div>
           <div>
-              <label htmlFor="confirmPassword"><p>Confirmar contraseña</p></label>
-              <input name="confirmPassword" type="password" id="confirmPassword" required />
+              <label htmlFor="confirmPassword" />
+              <input name="confirmPassword" type="password" id="confirmPassword" placeholder="Confirmar contraseña" required />
           </div>
           <button type="submit">Crear cuenta</button>
       </form>

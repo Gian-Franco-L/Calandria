@@ -8,19 +8,23 @@ import Search from "@/components/Search/Search"
 
 export default function BottomNavBar(){
 
-  const {apearProductList, productsListApear, productsListDesapear} = useApearProductsBrandsLists()
+  const {apearProductList, setApearProductList} = useApearProductsBrandsLists()
 
-  const productListStatus = apearProductList === "on" ? "productListOn" : "productListOff"
+  const productListStatus = apearProductList === true ? "productListOn" : "productListOff"
 
   return(
     <>
       <div className={BottomNavBarStyles.mainContainerPc}>
         <ul className={BottomNavBarStyles.navList}>
+<<<<<<< HEAD
           <li onMouseEnter={productsListApear}>
+=======
+          <li onClick={() => setApearProductList(prevState => prevState === true ? false : true)}>
+>>>>>>> dev
             <div style={{textAlign: 'center'}}>
               <Link href="/">Productos<IoIosArrowDown className={BottomNavBarStyles.arrowDown}/></Link>
             </div>
-            <ul className={`${BottomNavBarStyles.productsList} ${BottomNavBarStyles[productListStatus]}`} onMouseLeave={productsListDesapear}>
+            <ul className={`${BottomNavBarStyles.productsList} ${BottomNavBarStyles[productListStatus]}`}>
               <div className={BottomNavBarStyles.productSection}>
                 <Link href="/"><h5><li>Vuelta al cole</li></h5></Link>
                 <Link href="/"><li>Mochilas</li></Link>
@@ -30,7 +34,6 @@ export default function BottomNavBar(){
                 <span><Link href="/"><li>- Moda urbana</li></Link></span>
                 <Link href="/"><li>Cartucheras</li></Link>
                 <Link href="/"><li>Bolsos y luncheras</li></Link>
-                <Link href="/"><li>Botallas de agua</li></Link>
                 <Link href="/"><li>Set de jardin personalizados</li></Link>
                 <Link href="/"><li>Cintas identificadoras para ropa</li></Link>
                 <Link href="/"><li>Uniforme San Cayetano</li></Link>
@@ -110,7 +113,8 @@ export default function BottomNavBar(){
                 <Link href="/"><h5><li>Globos terráqueos</li></h5></Link>
                 <Link href="/"><h5><li>Cortantes</li></h5></Link>
                 <Link href="/"><h5><li>Baterias y pilas</li></h5></Link>
-                <Link href="/"><li><h5>Un poco de todo</h5></li></Link>
+                <Link href="/"><h5><li>Fantasia</li></h5></Link>
+                <Link href="/"><li><h5>Otros</h5></li></Link>
               </div>
             </ul>
           </li>

@@ -5,6 +5,7 @@ import PurchaseFormStyles from "@/styles/PurchaseForm/PurchaseForm.module.css"
 import ItemsOnCart from "./itemsOnCart/ItemsOnCart";
 import productService from "@/services/product"
 import { v4 as uuidv4 } from "uuid"
+import ProvinceFilter from "@/components/ProvinceFilter/ProvinceFilter"
 
 export default function PurchaseForm(){
 
@@ -43,7 +44,7 @@ export default function PurchaseForm(){
         </article>
         <div style={{
           width: '100%',
-          border: '1px solid grey',
+          border: '1px solid #3b151f',
           marginTop: '5%',
           marginBottom: '5%'
         }}></div>
@@ -128,7 +129,7 @@ export default function PurchaseForm(){
                 />
               </div>
             </div>
-            <div style={{ display: 'flex' }}>
+            <div className={PurchaseFormStyles.otherPerson}>
               <label htmlFor="otherPerson" />
               <input
                 name="otherPerson"
@@ -244,7 +245,8 @@ export default function PurchaseForm(){
               </div>
               <div style={{width: '47%'}}>
               <p>Provincia</p>
-              <select name="provinces" style={{width: '100%'}}>
+              <ProvinceFilter />
+              {/* <select name="provinces" style={{width: '100%'}}>
                 <option value="BA">Buenos Aires</option>
                 <option value="CF">Capital Federal</option>
                 <option value="CA">Catamarca</option>
@@ -269,7 +271,7 @@ export default function PurchaseForm(){
                 <option value="SDE">Santiago del Estero</option>
                 <option value="TDF">Tierra del Fuego</option>
                 <option value="T">Tucumán</option>
-              </select>
+              </select> */}
               </div>
             </div>
           </article>

@@ -13,20 +13,20 @@ export default function Contact(){
       <h1>Contacto</h1>
       <form action="" method="POST">
           <div>
-              <label htmlFor="name">Nombre</label>
-              <input name="nombre" type="email" id="name" required/>
+              <label htmlFor="name" />
+              <input name="nombre" type="email" id="name" placeholder="Nombre" required/>
           </div>
           <div>
-              <label htmlFor="mail">Email</label>
-              <input name="mail" type="email" id="mail" required />
+              <label htmlFor="mail" />
+              <input name="mail" type="email" id="mail" placeholder="Email" required />
           </div>
           <div>
-              <label htmlFor="phone">Telefono</label>
-              <input name="phone" type="phone" id="phone" required />
+              <label htmlFor="phone" />
+              <input name="phone" type="phone" id="phone" placeholder="Telefono" required />
           </div>
           <div>
-              <label htmlFor="consulta">Mensaje</label>
-              <textarea name="mensaje" id="consulta" cols={50} rows={13} required></textarea>
+              <label htmlFor="consulta" />
+              <textarea name="mensaje" id="consulta" placeholder="Mensaje" cols={50} rows={10} required></textarea>
           </div>
           <button type="submit">Enviar</button>
       </form>

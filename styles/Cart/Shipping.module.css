@@ -8,7 +8,11 @@
   margin-top: 3%;
 }
 .shipping a{
+<<<<<<< HEAD
   width: 60%;
+=======
+  width: 65%;
+>>>>>>> dev
   margin-top: 2%;
   font-size: .9rem;
   text-decoration: none;
@@ -16,6 +20,14 @@
 }
 .shipping a:hover{
   color: #a4304d;
+<<<<<<< HEAD
+=======
+}
+
+.shipping form{
+  display: flex;
+  justify-content: space-between;
+>>>>>>> dev
 }
 
 .shipping form input{
@@ -23,17 +35,30 @@
   width: 60%;
   border-radius: 10px;
   padding-left: 2%;
+<<<<<<< HEAD
   border: 2px solid rgb(80, 80, 80);
   box-shadow: 0px 0px 1px 1px rgb(80, 80, 80);
+=======
+  border: 2px solid #3b151f;
+>>>>>>> dev
   outline: none;
+}
+.shipping form label{
+  display: none;
 }
 .shipping form input:focus{
   border: 2px solid #a4304d;
+<<<<<<< HEAD
   box-shadow: 0px 0px 1px .5px #a4304d;
 }
 .shipping form button{
   height: 35px;
   margin-left: 17%;
+=======
+}
+.shipping form button{
+  height: 35px;
+>>>>>>> dev
   background-color: white;
   cursor: pointer;
   border: none;

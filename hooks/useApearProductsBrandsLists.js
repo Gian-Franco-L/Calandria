@@ -1,15 +1,8 @@
 import { useState } from "react"
 
-export default function useApearProductsBrandsLists(){
-  const [apearProductList, setApearProductList] = useState("off")
-
-  function productsListApear(){
-    setApearProductList("on")
-  }
-  function productsListDesapear(){
-    setApearProductList("off")
-  }
+export default function useApearProductsBrandsLists() {
+  const [apearProductList, setApearProductList] = useState(false)
 
 
-  return {apearProductList, productsListApear, productsListDesapear}
+  return { apearProductList, setApearProductList }
 }
