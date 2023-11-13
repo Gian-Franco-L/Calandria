@@ -33,11 +33,7 @@ export default function ProfileCartIcons({ navbarscrollStatus }: pageTypes){
   return(
   <>
     <div className={ProfileCartIconsStyles.mainContainer}>
-<<<<<<< HEAD
-      <section onMouseEnter={signRegisterApear} className={ProfileCartIconsStyles.profileIconContainer}>
-=======
       <section onClick={() => setSignRegister(prevState => prevState === 'on' ? 'off' : 'on')} className={ProfileCartIconsStyles.profileIconContainer}>
->>>>>>> dev
         <GoPerson className={ProfileCartIconsStyles.profileIcon}/>
         <div className={`${ProfileCartIconsStyles.signOrRegister} ${ProfileCartIconsStyles[signOrRegisterStatus]} ${ProfileCartIconsStyles[navbarscrollStatus]}`}>
           <a href="/register">Registrarse</a>

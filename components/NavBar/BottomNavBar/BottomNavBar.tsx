@@ -16,11 +16,7 @@ export default function BottomNavBar(){
     <>
       <div className={BottomNavBarStyles.mainContainerPc}>
         <ul className={BottomNavBarStyles.navList}>
-<<<<<<< HEAD
-          <li onMouseEnter={productsListApear}>
-=======
           <li onClick={() => setApearProductList(prevState => prevState === true ? false : true)}>
->>>>>>> dev
             <div style={{textAlign: 'center'}}>
               <Link href="/">Productos<IoIosArrowDown className={BottomNavBarStyles.arrowDown}/></Link>
             </div>

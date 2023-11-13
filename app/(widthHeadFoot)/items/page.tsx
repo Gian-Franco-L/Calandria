@@ -31,13 +31,8 @@ export default async function Items(){
         </article>
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>
-<<<<<<< HEAD
-        {/* <CategoriesFilters /> */}
-        <Filter />
-=======
         <CategoriesFilters />
         <PriceTimeFilter />
->>>>>>> dev
       </section>
       <div className={ArticlesStyles.categoriesAndItems}>
         <div className={ArticlesStyles.categories}>
