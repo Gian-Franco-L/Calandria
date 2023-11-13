@@ -38,3 +38,9 @@
 .filterSelect a:hover{
   background-color: transparent;
 }
+
+@media (width <= 991px){
+  .filterSelect button{
+    width: 100%;
+  }
+}
