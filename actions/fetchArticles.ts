@@ -58,7 +58,6 @@ export async function fetchArticles(page: number, search?: string | null, filter
   return articlesResu
 }
 
-
 export async function fetchSearchedArticles(page: number, search: {id: string}){
   const articlesCant = 25
 

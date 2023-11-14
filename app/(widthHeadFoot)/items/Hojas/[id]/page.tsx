@@ -51,7 +51,7 @@ export default function item({ params }: pageTypes){
           </div>
           <h1>Nombre del articulo</h1>
           <h3><span>Precio:</span> $0000,00</h3>
-          <h4><span>Disponibilidad:</span> Muchas/Pocas/Numero exacto</h4>
+          <h4><span>Disponibilidad:</span> Muchas/Pocas</h4>
           <h4><span>Categoria:</span> xxxxxxxx</h4>
           <h4><span>Marca:</span> xxxxxx</h4>
           <section>

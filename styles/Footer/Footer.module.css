@@ -1,29 +1,15 @@
 .mainContainer{
+  --p: #a4304d;
+  --s: #3b151f;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 500px;
   width: 100%;
-  margin-bottom: 20px;
-}
-
-.socialMedias{
-  display: flex;
-  justify-content: center;
-}
-
-.instaIcon{
-  height: 25px;
-  width: 25px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.fbIcon{
-  height: 25px;
-  width: 25px;
-  margin-left: 20px;
-  cursor: pointer;
+  padding-bottom: 20px;
+  background-color: var(--s);
+  color: white;
+  border-top: 1px solid white;
 }
 
 .directLinksContainer{
@@ -41,14 +27,45 @@
 .directLinks a{
   width: 120px;
   text-align: center;
-  color: black;
+  color: white;
   text-decoration: none;
+}
+.directLinks a:hover{
+  color: var(--p);
+}
+
+.socialMedias{
+  display: flex;
+  justify-content: center;
+}
+
+.instaIcon{
+  height: 25px;
+  width: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.instaIcon:hover{
+  color: var(--p);
+}
+
+.fbIcon{
+  height: 25px;
+  width: 25px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.fbIcon:hover{
+  color: var(--p);
 }
 
 .wpp{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.wpp:hover .wppIcon{
+  color: var(--p);
 }
 .wppIcon{
   height: 25px;
@@ -61,6 +78,9 @@
   justify-content: center;
   align-items: center;
 }
+.mail:hover .mailIcon{
+  color: var(--p);
+}
 .mailIcon{
   height: 25px;
   width: 25px;
@@ -72,6 +92,9 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.location:hover .locationIcon{
+  color: var(--p);
 }
 .locationIcon{
   height: 25px;
@@ -94,7 +117,8 @@
   display: flex;
   align-items: center;
   padding: 4px;
-  border: 1px solid rgb(219, 219, 219);
+  border: 1px solid var(--p);
+  background-color: white;
 }
 
 .shippingContainer{
@@ -109,7 +133,8 @@
 }
 .shippingSection span{
   padding: 4px;
-  border: 1px solid rgb(219, 219, 219);
+  border: 1px solid var(--p);
+  background-color: white;
 }
 
 .copyRight{
@@ -133,7 +158,10 @@
   font-size: .8rem;
 }
 .consumersDef p a{
-  color: black;
+  color: white;
+}
+.consumersDef p a:hover{
+  color: var(--p);
 }
 
 @media (width <= 1315px){
