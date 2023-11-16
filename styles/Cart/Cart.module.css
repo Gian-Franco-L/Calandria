@@ -78,7 +78,6 @@
   max-height: 40%;
   margin-top: 15%;
   padding-top: 2%;
-  overflow-y: scroll;
   overflow: auto;
 }
 .cartArticles::-webkit-scrollbar {

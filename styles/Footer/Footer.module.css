@@ -3,19 +3,17 @@
   --s: #3b151f;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 500px;
   width: 100%;
-  padding-bottom: 20px;
-  background-color: var(--s);
-  color: white;
-  border-top: 1px solid white;
 }
 
 .directLinksContainer{
   display: flex;
   justify-content: center;
+  height: 10%;
   width: 100%;
+  background-color: var(--s);
 }
 .directLinks{
   display: flex;
@@ -27,13 +25,19 @@
 .directLinks a{
   width: 120px;
   text-align: center;
-  color: white;
   text-decoration: none;
+  color: white;
 }
 .directLinks a:hover{
   color: var(--p);
 }
 
+.infoContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60%;
+}
 .socialMedias{
   display: flex;
   justify-content: center;
@@ -117,8 +121,6 @@
   display: flex;
   align-items: center;
   padding: 4px;
-  border: 1px solid var(--p);
-  background-color: white;
 }
 
 .shippingContainer{
@@ -133,8 +135,16 @@
 }
 .shippingSection span{
   padding: 4px;
-  border: 1px solid var(--p);
   background-color: white;
+}
+
+.extra{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20%;
+  background-color: var(--s);
+  color: white;
 }
 
 .copyRight{
@@ -143,6 +153,12 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   font-size: .8rem;
+  height: 50px;
+}
+.copyRight{
+  display: flex;
+  align-items: center;
+  
 }
 .copyRight span{
   display: flex;
@@ -153,11 +169,14 @@
 .consumersDef{
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 .consumersDef p{
   font-size: .8rem;
 }
 .consumersDef p a{
+  font-weight: bold;
   color: white;
 }
 .consumersDef p a:hover{
@@ -171,6 +190,28 @@
   }
 }
 
+@media (width <= 991px){
+  .mainContainer{
+    height: 100%;
+  }
+  .directLinksContainer{
+    height: 100px;
+  }
+  .copyRight{
+    height: 100%;
+  }
+  .consumersDef{
+    height: 100%;
+  }
+  .infoContainer article{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .extra article{
+    height: 80px;
+  }
+}
+
 @media (width <= 800px){
   .shippingSection{
     width: 90%;
@@ -179,28 +220,13 @@
 }
 
 @media (width <= 495px){
-  .mainContainer{
-    height: 800px;
-  }
-  .mainContainer section{
-    margin-bottom: 20px;
-  }
-
   .directLinks{
     justify-content: center;
-    height: 150px;
   }
-  
+
   .consumersDef{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-  }
-}
-
-@media (width <= 235px){
-  .mainContainer{
-    height: 900px;
   }
 }

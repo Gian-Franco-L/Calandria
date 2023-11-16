@@ -9,7 +9,7 @@
   overflow: hidden;
   transition: 0.3s ease all;
 }
-.slide img{
+.img{
   height: 200px;
   width: 50%;
   background-color: rgb(175, 175, 175);

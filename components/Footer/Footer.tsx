@@ -36,54 +36,58 @@ export default function Footer(){
           <Link href="/">Quiénes somos</Link>
         </div>
       </section>
-      <section className={FooterStyles.socialMedias}>
-        <BsInstagram className={FooterStyles.instaIcon} />
-        <BiLogoFacebook className={FooterStyles.fbIcon}/>
+      <section className={FooterStyles.infoContainer}>
+        <article className={FooterStyles.socialMedias}>
+          <BsInstagram className={FooterStyles.instaIcon} />
+          <BiLogoFacebook className={FooterStyles.fbIcon}/>
+        </article>
+        <article className={FooterStyles.wpp}>
+          <AiOutlineWhatsApp className={FooterStyles.wppIcon}/>
+          <p>+5400000000</p>
+        </article>
+        <article className={FooterStyles.mail}>
+          <FiMail className={FooterStyles.mailIcon}/>
+          <p>email@gmail.com</p>
+        </article>
+        <article className={FooterStyles.location}>
+          <IoLocationOutline className={FooterStyles.locationIcon} />
+          <p>Dirección 0000,&nbsp;</p>
+          <p>Localidad,&nbsp;</p>
+          <p>Provincia de Buenos Aires</p>
+        </article>
+        <article className={FooterStyles.paySectionContainer}>
+          <div className={FooterStyles.paySection}>
+            <span><Image src={visa} width={40} height={25} alt="visa"/></span>
+            <span><Image src={mastercard} width={40} height={25} alt="mastercard"/></span>
+            <span><Image src={banelco} width={40} height={25} alt="banelco"/></span>
+            <span><Image src={amex} width={40} height={25} alt="amex"/></span>
+            <span><Image src={argencard} width={40} height={25} alt="argencard"/></span>
+            <span><Image src={cabal} width={40} height={25} alt="cabal"/></span>
+            <span><Image src={cencosud} width={40} height={25} alt="cencosud"/></span>
+            <span><Image src={diners} width={40} height={25} alt="diners"/></span>
+            <span><Image src={mercadopago} width={40} height={25} alt="mercadopago"/></span>
+            <span><Image src={pagofacil} width={40} height={25} alt="pagofacil"/></span>
+            <span><Image src={rapipago} width={40} height={25} alt="rapipago"/></span>
+            <span><Image src={tarjetaNaranja} width={40} height={25} alt="tarjetaNaranja"/></span>
+            <span><Image src={tarjetaShopping} width={40} height={25} alt="tarjetaShopping"/></span>
+          </div>
+        </article>
+        <article className={FooterStyles.shippingContainer}>
+          <div className={FooterStyles.shippingSection}>
+            <span><Image src={correoArgentino} width={64} height={32} alt="correoArgentino"/></span>
+          </div>
+        </article>
       </section>
-      <section className={FooterStyles.wpp}>
-        <AiOutlineWhatsApp className={FooterStyles.wppIcon}/>
-        <p>+5400000000</p>
-      </section>
-      <section className={FooterStyles.mail}>
-        <FiMail className={FooterStyles.mailIcon}/>
-        <p>email@gmail.com</p>
-      </section>
-      <section className={FooterStyles.location}>
-        <IoLocationOutline className={FooterStyles.locationIcon} />
-        <p>Dirección 0000,&nbsp;</p>
-        <p>Localidad,&nbsp;</p>
-        <p>Provincia de Buenos Aires</p>
-      </section>
-      <section className={FooterStyles.paySectionContainer}>
-        <div className={FooterStyles.paySection}>
-          <span><Image src={visa} width={40} height={25} alt="visa"/></span>
-          <span><Image src={mastercard} width={40} height={25} alt="mastercard"/></span>
-          <span><Image src={banelco} width={40} height={25} alt="banelco"/></span>
-          <span><Image src={amex} width={40} height={25} alt="amex"/></span>
-          <span><Image src={argencard} width={40} height={25} alt="argencard"/></span>
-          <span><Image src={cabal} width={40} height={25} alt="cabal"/></span>
-          <span><Image src={cencosud} width={40} height={25} alt="cencosud"/></span>
-          <span><Image src={diners} width={40} height={25} alt="diners"/></span>
-          <span><Image src={mercadopago} width={40} height={25} alt="mercadopago"/></span>
-          <span><Image src={pagofacil} width={40} height={25} alt="pagofacil"/></span>
-          <span><Image src={rapipago} width={40} height={25} alt="rapipago"/></span>
-          <span><Image src={tarjetaNaranja} width={40} height={25} alt="tarjetaNaranja"/></span>
-          <span><Image src={tarjetaShopping} width={40} height={25} alt="tarjetaShopping"/></span>
-        </div>
-      </section>
-      <section className={FooterStyles.shippingContainer}>
-        <div className={FooterStyles.shippingSection}>
-          <span><Image src={correoArgentino} width={64} height={32} alt="correoArgentino"/></span>
-        </div>
-      </section>
-      <section className={FooterStyles.copyRight}>
-        <span><AiOutlineCopyrightCircle /><p>Copyright ********* - 2023</p></span>
-        <p>Creado por GianFranco Lombardini</p>
-        <p>Todos los derechos reservados.</p>
-      </section>
-      <section className={FooterStyles.consumersDef}>
-        <p>Defensa de las y los consumidores.&nbsp;</p>
-        <p>Para reclamos <a href="https://autogestion.produccion.gob.ar/consumidores" target="blank">ingrese aquí</a></p>
+      <section className={FooterStyles.extra}>
+        <article className={FooterStyles.copyRight}>
+          <span><AiOutlineCopyrightCircle /><p>Copyright ********* - 2023</p></span>
+          <p>Creado por GianFranco Lombardini</p>
+          <p>Todos los derechos reservados.</p>
+        </article>
+        <article className={FooterStyles.consumersDef}>
+          <p>Defensa de las y los consumidores.&nbsp;</p>
+          <p>Para reclamos <a href="https://autogestion.produccion.gob.ar/consumidores" target="blank">ingrese aquí</a></p>
+        </article>
       </section>
     </main>
   )

@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 500px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .item img{
-  height: 60px;
-  width: 40px;
+  height: 70px;
+  width: 50px;
+  border-radius: 10px;
 }
 
 .itemNameCant{

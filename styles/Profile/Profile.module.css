@@ -126,6 +126,9 @@
   .profileInfo{
     width: 90vw;
   }
+  .profileInfo div{
+    width: 100%;
+  }
   .purchases{
     width: 90vw;
   }

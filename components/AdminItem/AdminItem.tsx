@@ -24,21 +24,21 @@ export default function AdminItem({ item }: pageTypes){
         <input type="text" />
       </div>
       <p className={`${AdminItemStyle.gridItemsCenterWithBorder} ${AdminItemStyle.stockGrid}`}>
-        Stock
+        Cant Stock
       </p>
       <p className={`${AdminItemStyle.gridItemsCenterWithBorder} ${AdminItemStyle.changeStockGrid}`}>
         <input type="text" />
         <label htmlFor="">u</label>
       </p>
       <p className={`${AdminItemStyle.gridItemsCenterWithBorder} ${AdminItemStyle.discountGrid}`}>
-        Descuento
+        Cant Descuento
       </p>
       <p className={`${AdminItemStyle.gridItemsCenterWithBorder} ${AdminItemStyle.changeDiscountGrid}`}>
         <input type="text" />
         <label htmlFor="">%</label>
       </p>
       <p className={`${AdminItemStyle.gridItemsCenterWithBorder} ${AdminItemStyle.visibilityGrid}`}>
-        Visible / No visible
+        Visible
       </p>
       <p className={`${AdminItemStyle.gridItemsCenterWithBorder} ${AdminItemStyle.changeVisibilityGrid}`}>
         <input type="text" />

@@ -18,7 +18,7 @@ export default function BottomNavBar(){
         <ul className={BottomNavBarStyles.navList}>
           <li onClick={() => setApearProductList(prevState => prevState === true ? false : true)}>
             <div style={{textAlign: 'center'}}>
-              <Link href="/">Productos<IoIosArrowDown className={BottomNavBarStyles.arrowDown}/></Link>
+              <div style={{display: 'flex', alignItems: 'center'}}>Productos<IoIosArrowDown className={BottomNavBarStyles.arrowDown}/></div>
             </div>
             <ul className={`${BottomNavBarStyles.productsList} ${BottomNavBarStyles[productListStatus]}`}>
               <div className={BottomNavBarStyles.productSection}>

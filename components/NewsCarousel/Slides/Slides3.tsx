@@ -8,6 +8,7 @@ const Slides3 = () =>{
       <section className={SlidesStyles.slide}>
         <h3>Articulo</h3>
         {/* <Image src="" alt="foto" /> */}
+        <div className={SlidesStyles.img}></div>
         <span>
           <Link href="/items/123">
             <button className={SlidesStyles.seeButton}>Ver</button>

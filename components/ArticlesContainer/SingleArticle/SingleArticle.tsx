@@ -2,6 +2,7 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import SingleArticleStyles from "@/styles/Articles/SingleArticles.module.css"
+import ItemCant from "@/components/Cart/Items/ItemCant/ItemCant"
 
 interface pageType{
   item: {
@@ -18,24 +19,24 @@ interface pageType{
 export default function SigleArticle({ item }: pageType){
 
   return(
-    <div className={SingleArticleStyles.mainContainer}>
-      <Image
-        src={item.Img} 
-        alt="" 
-        width={170}
-        height={500}
-      />
-      <div>
-        <h3>{item.Name}</h3>
-        <p>${item.Price}</p>
-      </div>
-      <section>
-        <Link href={`/items/${item.id}`}></Link>
-        <button>Comprar</button>
-        <Link href={`/items/${item.id}`} className={SingleArticleStyles.seeButton}>
-          <button>Ver</button>
-        </Link>
-      </section>
+    <div  className={SingleArticleStyles.mainContainer}>
+      <Link href={`/items/${item.id}`}>
+        <Image
+          src={item.Img} 
+          alt="" 
+          width={170}
+          height={500}
+        />
+        <section>
+          <h5>{item.Name}</h5>
+          <p>${item.Price}</p>
+        </section>
+      </Link>
+      <article>
+        <div className={SingleArticleStyles.invisibleWall}/>
+        <ItemCant />
+        <button className={SingleArticleStyles.buyButton}>Comprar</button>
+      </article>
     </div>
   )
 }
