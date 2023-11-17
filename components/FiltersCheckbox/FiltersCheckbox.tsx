@@ -35,10 +35,6 @@ export default function FiltersCheckbox(){
     }
   }
 
-  useEffect(() =>{
-    router.push(`${pathname}?${searchFilter !== null ? `filter=${searchFilter}`: ''}${(checks[0].status && checks[1].status) ? '&itemTypes=Hogar|Niños' : checks[0].status ? '&itemTypes=Hogar' : checks[1].status ? '&itemTypes=Niños' : ''}`)
-  }, [checks])
-
   return(
     <>
       <h3>Filtrar por</h3>
