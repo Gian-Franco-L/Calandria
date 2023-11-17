@@ -32,16 +32,10 @@ export default function FiltersCheckbox(){
       newChecks[index].status = !newChecks[index].status
 
       setChecks(newChecks)
+
+      router.push(`${pathname}?${searchFilter !== null ? `filter=${searchFilter}`: ''}${(newChecks[0].status && newChecks[1].status) ? '&itemTypes=Hogar|Niños' : newChecks[0].status ? '&itemTypes=Hogar' : newChecks[1].status ? '&itemTypes=Niños' : ''}`)
     }
   }
-
-  useEffect(() =>{
-    console.log(router);
-    console.log(pathname);
-    console.log(searchFilter);
-    console.log(checks);
-    router.push(`''`)
-  }, [router, pathname, searchFilter, checks])
 
   return(
     <>
