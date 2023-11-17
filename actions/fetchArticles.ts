@@ -18,6 +18,9 @@ interface articleObject{
 export async function fetchArticles(page: number, search?: string | null, filter?: string | null){
   const articlesCant = 25
 
+  console.log(search);
+  console.log(filter);
+
   let getArticles = await productService.getAll()
 
   if(search === null || search === undefined) search = 'Precio<'

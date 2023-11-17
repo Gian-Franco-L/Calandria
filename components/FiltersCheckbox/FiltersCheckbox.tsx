@@ -10,7 +10,7 @@ export default function FiltersCheckbox(){
 
   const searchParams = useSearchParams()
   const searchFilter = searchParams.get('filter')
-  const tipes = searchParams.get('itemTypes')
+  const types = searchParams.get('itemTypes')
   const pathname = usePathname()
 
   const router = useRouter()
@@ -36,6 +36,23 @@ export default function FiltersCheckbox(){
       router.push(`${pathname}?${searchFilter !== null ? `filter=${searchFilter}`: ''}${(newChecks[0].status && newChecks[1].status) ? '&itemTypes=Hogar|Niños' : newChecks[0].status ? '&itemTypes=Hogar' : newChecks[1].status ? '&itemTypes=Niños' : ''}`)
     }
   }
+
+  useEffect(() =>{
+    let newChecks = [...checks]
+
+    if(types === 'Hogar') newChecks[0].status = true
+    if(types === 'Niños') newChecks[1].status = true
+    if(types === 'filter3') newChecks[2].status = true
+    if(types === 'filter4') newChecks[3].status = true
+    if(types === 'filter5') newChecks[4].status = true
+    if(types === 'filter6') newChecks[5].status = true
+    if(types === 'Hogar|Niños'){
+      newChecks[0].status = true
+      newChecks[1].status = true
+    }
+    
+    setChecks(newChecks)
+  }, [])
 
   return(
     <>

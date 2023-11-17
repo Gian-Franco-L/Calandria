@@ -61,7 +61,7 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
   }, [searchFilter, searchItemTypes])
 
   useEffect(() =>{
-    if(articles[articles.length-1] === undefined){
+    if(articles[articles.length-1] === undefined && !articles?.length){
       setSpinnerState(false)
     }
     if(inView && spinnerState){
