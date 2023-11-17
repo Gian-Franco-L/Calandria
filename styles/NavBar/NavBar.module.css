@@ -33,11 +33,16 @@
 }
 
 @media (width < 991px){
+  .smallNavBar{
+    height: 150px;
+  }
+
   .logo{
     z-index: 1;
     position: absolute;
     height: 50%;
     left: 30%;
+    margin-top: 5px;
     transition: 1s;
   }
 
@@ -45,7 +50,6 @@
     width: 40%;
   }
   .smallLogo{
-    width: 30%;
-    left: 35%;
+    width: 40%;
   }
 }

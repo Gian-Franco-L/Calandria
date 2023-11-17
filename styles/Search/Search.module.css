@@ -64,3 +64,14 @@
   top: 4%;
   height: 42px;
 }
+
+@media (width <= 991px){
+  .smallNavBarInput{
+    height: 45px;
+  }
+
+  .smallLogo{
+    top: 4%;
+    height: 42px;
+  }
+}
