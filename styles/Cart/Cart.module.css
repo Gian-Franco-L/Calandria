@@ -127,6 +127,7 @@
   }
   .finishBuy{
     height: 40px;
+    width: 75%;
     margin-bottom: 3%;
   }
   .finishBuy:hover{

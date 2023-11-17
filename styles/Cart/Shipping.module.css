@@ -160,6 +160,12 @@
   .shipping a{
     width: 80%;
   }
+  .shipping a:hover{
+    color: black;
+  }
+  .shipping a:active{
+    color: #a4304d;
+  }
   .location p{
     text-align: left;
     margin-left: 10px;

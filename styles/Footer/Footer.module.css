@@ -148,12 +148,12 @@
 }
 
 .copyRight{
-  width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  font-size: .8rem;
   height: 50px;
+  width: 100%;
+  font-size: .8rem;
 }
 .copyRight{
   display: flex;
@@ -194,19 +194,31 @@
   .mainContainer{
     height: 100%;
   }
+
   .directLinksContainer{
     height: 100px;
   }
+
   .copyRight{
     height: 100%;
   }
+
+  .copyRight{
+    padding-top: 10px;
+  }
+
   .consumersDef{
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
   .infoContainer article{
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
   .extra article{
     height: 80px;
   }
@@ -222,11 +234,5 @@
 @media (width <= 495px){
   .directLinks{
     justify-content: center;
-  }
-
-  .consumersDef{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }

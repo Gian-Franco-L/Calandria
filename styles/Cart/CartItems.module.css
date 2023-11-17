@@ -35,3 +35,15 @@
   transform: scale(1.2);
   color: #a4304d;
 }
+
+@media (width <= 991px)
+{
+  .trash:hover{
+    transform: scale(1);
+    color: #3b151f;
+  }
+  .trash:active{
+    transform: scale(1.2);
+    color: #a4304d;
+  }
+}
