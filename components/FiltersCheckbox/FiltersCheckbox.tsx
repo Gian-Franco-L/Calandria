@@ -36,7 +36,11 @@ export default function FiltersCheckbox(){
   }
 
   useEffect(() =>{
-    router.push(`${pathname}?${searchFilter !== null ? `filter=${searchFilter}`: ''}${(checks[0].status && checks[1].status) ? '&itemTypes=Hogar|Niños' : checks[0].status ? '&itemTypes=Hogar' : checks[1].status ? '&itemTypes=Niños' : ''}`)
+    console.log(router);
+    console.log(pathname);
+    console.log(searchFilter);
+    console.log(checks);
+    router.push(`''`)
   }, [router, pathname, searchFilter, checks])
 
   return(
@@ -44,22 +48,22 @@ export default function FiltersCheckbox(){
       <h3>Filtrar por</h3>
       <div className={FiltersCheckboxStyles.inputs}>
         <label>
-          <input type="checkbox" name="hogar" checked={checks[0].status === false ? false : true} />Hogar
+          <input type="checkbox" name="hogar" checked={checks[0].status === false ? false : true} onChange={() => handleChexbox('Hogar')}/>Hogar
         </label>
         <label>
-          <input type="checkbox" name="niños" checked={checks[1].status === false ? false : true} />Niños
+          <input type="checkbox" name="niños" checked={checks[1].status === false ? false : true} onChange={() => handleChexbox('Niños')}/>Niños
         </label>
         <label>
-          <input type="checkbox" name="3" checked={checks[2].status === false ? false : true} />3
+          <input type="checkbox" name="3" checked={checks[2].status === false ? false : true} onChange={() => handleChexbox('filter3')}/>3
         </label>
         <label>
-          <input type="checkbox" name="4" checked={checks[3].status === false ? false : true} />4
+          <input type="checkbox" name="4" checked={checks[3].status === false ? false : true} onChange={() => handleChexbox('filter4')}/>4
         </label>
         <label>
-          <input type="checkbox" name="5" checked={checks[4].status === false ? false : true} />5
+          <input type="checkbox" name="5" checked={checks[4].status === false ? false : true} onChange={() => handleChexbox('filter5')}/>5
         </label>
         <label>
-          <input type="checkbox" name="6" checked={checks[5].status === false ? false : true} />6
+          <input type="checkbox" name="6" checked={checks[5].status === false ? false : true} onChange={() => handleChexbox('filter6')}/>6
         </label>
       </div>
     </>
