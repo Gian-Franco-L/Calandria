@@ -5,6 +5,12 @@
   width: 70%;
 }
 
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .spinner{
   position: absolute;
   bottom: 0;
@@ -13,5 +19,9 @@
 @media (width <= 630px){
   .articles{
     justify-content: center;
+  }
+
+  .spinner{
+    bottom: 0;
   }
 }

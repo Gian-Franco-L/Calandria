@@ -61,7 +61,7 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
   }, [searchFilter, searchItemTypes])
 
   useEffect(() =>{
-    if(articles[articles.length-1] === undefined){
+    if(articles[articles.length-1] === undefined && !articles?.length){
       setSpinnerState(false)
     }
     if(inView && spinnerState){
@@ -71,26 +71,28 @@ export default function ArticlesContainer({initialArticles} :pageTypes){
 
   return(
     <section className={ArticlesContainerStyles.articles}>
-      {articles?.length
-        ? articles.map((item: {
-          id: string,
-          Name: string,
-          Price: number,
-          Date: number,
-          Size: string,
-          Img: string,
-          Stuffing: string,
-          Type: string,
-          Status: string,
-          Material: string
-        }) =>{
-            return <SingleArticle 
-                      item={item}
-                      key={uuidv4()}
-                    />
-          })
-        : <Skeletons />
-      }
+      <div className={ArticlesContainerStyles.items}>
+        {articles?.length
+          ? articles.map((item: {
+            id: string,
+            Name: string,
+            Price: number,
+            Date: number,
+            Size: string,
+            Img: string,
+            Stuffing: string,
+            Type: string,
+            Status: string,
+            Material: string
+          }) =>{
+              return <SingleArticle 
+                        item={item}
+                        key={uuidv4()}
+                      />
+            })
+          : <Skeletons />
+        }
+      </div>
       {
         spinnerState === true
           &&  <div className={ArticlesContainerStyles.spinner} ref={ref}>

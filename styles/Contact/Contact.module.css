@@ -66,6 +66,7 @@
   font-size: 1.3rem;
   color: white;
   background-color: var(--s);
+  border-radius: 10px;
   border: none;
 }
 .mainContainer form button:hover{

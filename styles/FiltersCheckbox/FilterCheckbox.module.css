@@ -65,6 +65,10 @@
 }
 
 @media (width <= 991px){
+  .inputs:hover{
+    border-top: none;
+    border: none;
+  }
   .inputs{
     margin-bottom: 130px;
     position: relative;

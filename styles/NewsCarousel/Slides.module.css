@@ -8,13 +8,12 @@
   width: 280px;
   overflow: hidden;
   transition: 0.3s ease all;
+  color: black;
+  text-decoration: none;
 }
 .img{
   height: 200px;
   width: 50%;
   background-color: rgb(175, 175, 175);
-}
-.seeButton{
-  margin-top: 10px;
 }
 
