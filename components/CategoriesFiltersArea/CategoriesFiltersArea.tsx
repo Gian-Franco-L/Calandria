@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import CategoriesFiltersAreaStyles from "@/styles/CategoriesFiltersArea/CategoriesFiltersArea.module.css"
-import useGetNavBarScroll from "@/hooks/useGetNavBarScroll";
 import FiltersCheckbox from "../FiltersCheckbox/FiltersCheckbox";
 import { MdOutlineCancel } from "react-icons/md"
 import { GrFormDown } from "react-icons/gr"
@@ -13,11 +12,9 @@ interface Pagetypes{
 export default function CategoriesFiltersArea({ categoriesStatus, setCategoriesStatus }: Pagetypes){
 
   const categoriesAreaStatus = categoriesStatus === "on" ? "openCategoriesArea" : "closeCategoriesArea"
-  const { navbarscroll } = useGetNavBarScroll()
-  const navbarscrollStatus = navbarscroll > 30 ? "smallNavBar" : "normalNavBar"
 
   return(
-    <div className={`${CategoriesFiltersAreaStyles.categoriesAreaContainer} ${CategoriesFiltersAreaStyles[categoriesAreaStatus]} ${CategoriesFiltersAreaStyles[navbarscrollStatus]}`}>
+    <div className={`${CategoriesFiltersAreaStyles.categoriesAreaContainer} ${CategoriesFiltersAreaStyles[categoriesAreaStatus]}`}>
       <div className={CategoriesFiltersAreaStyles.tittle}>
         <MdOutlineCancel className={CategoriesFiltersAreaStyles.closeCategoriesAreaButton} onClick={() => setCategoriesStatus("off")}/>
         <h2>Filtros</h2>

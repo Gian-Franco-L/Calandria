@@ -151,6 +151,7 @@
   font-size: clamp(.7rem, 4.5vw, 1.5rem);
   color: white;
   background-color: #3b151f;
+  border-radius: 10px;
   cursor: pointer;
 }
 .finishBuy:hover{
