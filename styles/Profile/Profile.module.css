@@ -129,6 +129,10 @@
   .profileInfo div{
     width: 100%;
   }
+  .profileInfo:hover{
+    border: 3px solid var(--s);
+    border-top: none;
+  }
   .purchases{
     width: 90vw;
   }

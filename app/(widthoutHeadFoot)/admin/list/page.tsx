@@ -38,3 +38,14 @@ export default async function Admin(){
     </div>
   )
 }
+
+
+https://calandria.vercel.app/
+https://calandria.vercel.app/items
+https://calandria.vercel.app/items/Arte/647e62dbcd6fca4721b0844e
+https://calandria.vercel.app/login
+https://calandria.vercel.app/register
+https://calandria.vercel.app/profile
+https://calandria.vercel.app/purchaseForm
+https://calandria.vercel.app/admin/list
+https://calandria.vercel.app/admin/pending

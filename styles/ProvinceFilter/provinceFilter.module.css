@@ -12,26 +12,22 @@
   background-color: white;
   border: 3px solid #a4304d;
 }
-
 .filterSelect button:active{
   color: black;
   background-color: white;
   border: 3px solid #a4304d;
 }
-
 .filterSelect button:focus{
   color: black;
   background-color: white;
   border: 3px solid #a4304d;
 }
-
 .filterSelect div{
   z-index: 1;
   width: 70%;
   margin-top: 1%;
   border: 3px solid #a4304d;
 }
-
 .filterSelect p:hover{
   color: #a4304d;
 }
@@ -43,4 +39,5 @@
   .filterSelect button{
     width: 100%;
   }
+  
 }
