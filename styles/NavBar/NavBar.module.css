@@ -32,7 +32,7 @@
   width: 10%;
 }
 
-@media (width <= 1280px){
+@media (width <= 1440px){
   .normalNavBar{
     height: 100px;
   }
