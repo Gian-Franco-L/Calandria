@@ -78,8 +78,9 @@
   flex-direction: column;
   font-size: clamp(.5rem , 1.2vw, 1.1rem);
 }
-.productSection h5{
-  font-size: clamp(.5rem , 1.2vw, 1.4rem);
+.productSection p{
+  font-size: clamp(.5rem , 1.3vw, 1.5rem);
+  font-weight: bold;
 }
 .productSection span{
   font-size: clamp(.5rem , 1.2vw, .9rem);
@@ -98,7 +99,7 @@
     width: 50%;
   }
   .productsList li{
-    height: 29px;
+    height: 28px;
     width: 100%;
   }
 }
