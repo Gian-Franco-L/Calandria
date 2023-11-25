@@ -65,7 +65,7 @@
   height: 42px;
 }
 
-@media (width <= 1280px){
+@media (width <= 1440px){
   .normalNavBarInput{
     height: 35px;
   }
