@@ -19,7 +19,7 @@ export default async function GlobosTerraqueos(){
           <p>&nbsp;&#62;&nbsp;</p>
           <Link href="/items">Productos</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Globos Terráqueos</p>
+          <p>Globos terráqueos</p>
         </article>
         <article>
           <PriceTimeFilter />
@@ -27,11 +27,11 @@ export default async function GlobosTerraqueos(){
       </section>
       <section className={ArticlesStyles.homeMobile}>
         <article className={ArticlesStyles.homeLink}>
-          <Link href="/">Inicio</Link>
+        <Link href="/">Inicio</Link>
           <p>&nbsp;&#62;&nbsp;</p>
           <Link href="/items">Productos</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Globos Terráqueos</p>
+          <p>Globos terráqueos</p>
         </article>
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>

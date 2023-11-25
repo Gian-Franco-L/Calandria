@@ -42,22 +42,22 @@ export default async function Escritura(){
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
           <div className={ArticlesStyles.linksBorder}>
-            <Link href="#">Lápices</Link>
-            <Link href="#">- Colores</Link>
-            <Link href="#">- Sacapuntas</Link>
-            <Link href="#">- Goma de borrar</Link>
-            <Link href="#">Boligrafos</Link>
-            <Link href="#">- Repuestos</Link>
-            <Link href="#">Marcadores</Link>
-            <Link href="#">Resaltadores</Link>
-            <Link href="#">Roller</Link>
-            <Link href="#">- Gel</Link>
-            <Link href="#">- Ball</Link>
-            <Link href="#">Microfibras</Link>
-            <Link href="#">Correctores</Link>
-            <Link href="#">Crayones</Link>
-            <Link href="#">Portaminas</Link>
-            <Link href="#">- Minas</Link>
+            <Link href="/items/Escritura/Lapices">Lápices</Link>
+            <Link href="/items/Escritura/Lapices/Colores">- Colores</Link>
+            <Link href="/items/Escritura/Lapices/Sacapuntas">- Sacapuntas</Link>
+            <Link href="/items/Escritura/Lapices/Gomas">- Goma de borrar</Link>
+            <Link href="/items/Escritura/Boligrafos">Boligrafos</Link>
+            <Link href="/items/Escritura/Boligrafos/Repuestos">- Repuestos</Link>
+            <Link href="/items/Escritura/Marcadores">Marcadores</Link>
+            <Link href="/items/Escritura/Resaltadores">Resaltadores</Link>
+            <Link href="/items/Escritura/Roller">Roller</Link>
+            <Link href="/items/Escritura/Roller/Gel">- Gel</Link>
+            <Link href="/items/Escritura/Roller/Ball">- Ball</Link>
+            <Link href="/items/Escritura/Microfibras">Microfibras</Link>
+            <Link href="/items/Escritura/Correctores">Correctores</Link>
+            <Link href="/items/Escritura/Crayones">Crayones</Link>
+            <Link href="/items/Escritura/Portaminas">Portaminas</Link>
+            <Link href="/items/Escritura/Portaminas/Minas">- Minas</Link>
           </div>
           <FiltersCheckbox />
         </article>

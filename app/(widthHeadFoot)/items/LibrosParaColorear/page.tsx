@@ -19,7 +19,7 @@ export default async function LibrosParaColorear(){
           <p>&nbsp;&#62;&nbsp;</p>
           <Link href="/items">Productos</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Libros para colorear</p>
+          <p>Libros Para Colorear</p>
         </article>
         <article>
           <PriceTimeFilter />
@@ -29,9 +29,7 @@ export default async function LibrosParaColorear(){
         <article className={ArticlesStyles.homeLink}>
           <Link href="/">Inicio</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <Link href="/items">Productos</Link>
-          <p>&nbsp;&#62;&nbsp;</p>
-          <p>Libros para colorear</p>
+          <p>Libros Para Colorear</p>
         </article>
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>

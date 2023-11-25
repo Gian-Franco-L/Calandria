@@ -42,13 +42,13 @@ export default async function Hojas(){
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
           <div className={ArticlesStyles.linksBorder}>
-            <Link href="#">Repuestos hojas escolares</Link>
-            <Link href="#">Separadores</Link>
-            <Link href="#">Etiquetas</Link>
-            <Link href="#">Folios</Link>
-            <Link href="#">Blocks</Link>
-            <Link href="#">- Recibos</Link>
-            <Link href="#">Resmas</Link>
+            <Link href="/items/Hojas/RepuestosEscolares">Repuestos hojas escolares</Link>
+            <Link href="/items/Hojas/Separadores">Separadores</Link>
+            <Link href="/items/Hojas/Etiquetas">Etiquetas</Link>
+            <Link href="/items/Hojas/Folios">Folios</Link>
+            <Link href="/items/Hojas/Blocks">Blocks</Link>
+            <Link href="/items/Hojas/Blocks/Recibos">- Recibos</Link>
+            <Link href="/items/Hojas/Resmas">Resmas</Link>
           </div>
           <FiltersCheckbox />
         </article>

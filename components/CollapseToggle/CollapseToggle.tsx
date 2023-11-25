@@ -13,7 +13,7 @@ import Geometria from './Geometria/Geometria';
 import Hojas from './Hojas/Hojas';
 import PapelesCartones from './PapelesCartones/PapelesCartones';
 import Pizarras from './Pizarras/Pizarras';
-import Otros from './UnPocoDeTodo/UnPocoDeTodo';
+import Otros from './Otros/Otros';
 
 interface PageTypes{
   option: string

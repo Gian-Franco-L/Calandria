@@ -42,7 +42,7 @@ export default async function Pizarras(){
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
           <div className={ArticlesStyles.linksBorder}>
-            <Link href="#">Imanes</Link>
+            <Link href="/items/Pizarras/Imanes">Imanes</Link>
           </div>
           <FiltersCheckbox />
         </article>

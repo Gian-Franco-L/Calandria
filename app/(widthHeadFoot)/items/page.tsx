@@ -58,7 +58,7 @@ export default async function Items(){
             <Link href="/items/Cortantes">Cortantes</Link>
             <Link href="/items/BateriasYPilas">Baterias y pilas</Link>
             <Link href="/items/Fantasia">Fantasia</Link>
-            <Link href="/items/UnPocoDeTodo">Otros</Link>
+            <Link href="/items/Otros">Otros</Link>
           </div>
           <FiltersCheckbox />
         </div>

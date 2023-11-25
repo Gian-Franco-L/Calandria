@@ -32,7 +32,19 @@
   width: 10%;
 }
 
+@media (width <= 1280px){
+  .normalNavBar{
+    height: 100px;
+  }
+  .smallLogo{
+    width: 15%;
+  }
+}
+
 @media (width < 991px){
+  .normalNavBar{
+    height: 150px;
+  }
   .smallNavBar{
     height: 150px;
   }

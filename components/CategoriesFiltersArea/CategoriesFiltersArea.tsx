@@ -41,7 +41,7 @@ export default function CategoriesFiltersArea({ categoriesStatus, setCategoriesS
           <Link href="/items/GlobosTerraqueos">Globos terráqueos</Link>
           <Link href="/items/Cortantes">Cortantes</Link>
           <Link href="/items/BateriasYPilas">Baterias y pilas</Link>
-          <Link href="/items/UnPocoDeTodo">Otros</Link>
+          <Link href="/items/Otros">Otros</Link>
         </article>
         <article>
           <FiltersCheckbox />

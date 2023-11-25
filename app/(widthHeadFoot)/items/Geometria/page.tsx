@@ -42,8 +42,8 @@ export default async function Geometria(){
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
           <div className={ArticlesStyles.linksBorder}>
-            <Link href="#">Reglas</Link>
-            <Link href="#">Compás</Link>
+            <Link href="/items/Geometria/Reglas">Reglas</Link>
+            <Link href="/items/Geometria/Compas">Compás</Link>
           </div>
           <FiltersCheckbox />
         </article>

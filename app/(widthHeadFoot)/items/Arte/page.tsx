@@ -42,14 +42,14 @@ export default async function Arte(){
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
           <div className={ArticlesStyles.linksBorder}>
-            <Link href="#">Témperas</Link>
-            <Link href="#">Acuarelas</Link>
-            <Link href="#">Set de dibujo</Link>
-            <Link href="#">Brillantina</Link>
-            <Link href="#">Goma eva</Link>
-            <Link href="#">Pinceles</Link>
-            <Link href="#">Paletas</Link>
-            <Link href="#">Flautas</Link>
+            <Link href="/items/Arte/Temperas">Temperas</Link>
+            <Link href="/items/Arte/Acuarelas">Acuarelas</Link>
+            <Link href="/items/Arte/SetDibujo">Set de dibujo</Link>
+            <Link href="/items/Arte/Brillantina">Brillantina</Link>
+            <Link href="/items/Arte/GomaEva">Goma eva</Link>
+            <Link href="/items/Arte/Pinceles">Pinceles</Link>
+            <Link href="/items/Arte/Paletas">Paletas</Link>
+            <Link href="/items/Arte/Flautas">Flautas</Link>
           </div>
           <FiltersCheckbox />
         </article>

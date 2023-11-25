@@ -29,8 +29,6 @@ export default async function Calculadoras(){
         <article className={ArticlesStyles.homeLink}>
           <Link href="/">Inicio</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <Link href="/items">Productos</Link>
-          <p>&nbsp;&#62;&nbsp;</p>
           <p>Calculadoras</p>
         </article>
       </section>
@@ -42,8 +40,8 @@ export default async function Calculadoras(){
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
           <div className={ArticlesStyles.linksBorder}>
-            <Link href="#">Basicas</Link>
-            <Link href="#">Cientificas</Link>
+            <Link href="/items/Calculadoras/Basicas">Basicas</Link>
+            <Link href="/items/Calculadoras/Cientificas">Cientificas</Link>
           </div>
           <FiltersCheckbox />
         </article>

@@ -45,7 +45,7 @@ export default function item({ params }: pageTypes){
             <p>&nbsp;&#62;&nbsp;</p>
             <Link href="/items">Productos</Link>
             <p>&nbsp;&#62;&nbsp;</p>
-            <Link href="/items/GlobosTerraqueos">Globos Terráqueos</Link>
+            <Link href="/items/GlobosTerraqueos">Globos terráqueos</Link>
             <p>&nbsp;&#62;&nbsp;</p>
             <p>Item</p>
           </div>

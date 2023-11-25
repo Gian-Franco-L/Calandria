@@ -7,7 +7,7 @@ import { fetchArticles } from "@/actions/fetchArticles";
 import PriceTimeFilter from "@/components/PriceTimeFilter/PriceTimeFilter";
 import FiltersCheckbox from "@/components/FiltersCheckbox/FiltersCheckbox";
 
-export default async function Cuadernos(){
+export default async function Carpetas(){
 
   const initialArticles = await fetchArticles(1, 'Precio<')
 
@@ -19,7 +19,7 @@ export default async function Cuadernos(){
           <p>&nbsp;&#62;&nbsp;</p>
           <Link href="/items">Productos</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Cuadernos</p>
+          <p>Carpetas</p>
         </article>
         <article>
           <PriceTimeFilter />
@@ -29,7 +29,7 @@ export default async function Cuadernos(){
         <article className={ArticlesStyles.homeLink}>
           <Link href="/">Inicio</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Cuadernos</p>
+          <p>Carpetas</p>
         </article>
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>
@@ -40,12 +40,13 @@ export default async function Cuadernos(){
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
           <div className={ArticlesStyles.linksBorder}>
-            <Link href="#">A4</Link>
-            <Link href="#">A5</Link>
-            <Link href="#">A6</Link>
-            <Link href="#">Escolares</Link>
-            <Link href="#">Económicos</Link>
-            <Link href="#">Cuaderno dibujo</Link>
+            <Link href="/items/Carpetas/N3">N°3</Link>
+            <Link href="/items/Carpetas/N5">N°5</Link>
+            <Link href="/items/Carpetas/N6">N°6</Link>
+            <Link href="/items/Carpetas/2x40">2x40</Link>
+            <Link href="/items/Carpetas/3x40">3x40</Link>
+            <Link href="/items/Carpetas/A4">A4</Link>
+            <Link href="/items/Carpetas/3solapas">3 Solapas</Link>
           </div>
           <FiltersCheckbox />
         </article>

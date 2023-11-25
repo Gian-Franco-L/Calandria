@@ -45,7 +45,7 @@ export default function item({ params }: pageTypes){
             <p>&nbsp;&#62;&nbsp;</p>
             <Link href="/items">Productos</Link>
             <p>&nbsp;&#62;&nbsp;</p>
-            <Link href="/items/BateriasYPilas">Baterias Y Pilas</Link>
+            <Link href="/items/BateriasYPilas">Baterias y pilas</Link>
             <p>&nbsp;&#62;&nbsp;</p>
             <p>Item</p>
           </div>

@@ -19,7 +19,7 @@ export default async function BateriasYPilas(){
           <p>&nbsp;&#62;&nbsp;</p>
           <Link href="/items">Productos</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Baterias Y Pilas</p>
+          <p>Baterias y pilas</p>
         </article>
         <article>
           <PriceTimeFilter />
@@ -31,7 +31,7 @@ export default async function BateriasYPilas(){
           <p>&nbsp;&#62;&nbsp;</p>
           <Link href="/items">Productos</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Baterias Y Pilas</p>
+          <p>Baterias y pilas</p>
         </article>
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>

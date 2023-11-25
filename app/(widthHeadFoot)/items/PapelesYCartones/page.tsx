@@ -19,7 +19,7 @@ export default async function PapelesYCartones(){
           <p>&nbsp;&#62;&nbsp;</p>
           <Link href="/items">Productos</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Papeles Y Cartones</p>
+          <p>Papeles y cartones</p>
         </article>
         <article>
           <PriceTimeFilter />
@@ -31,7 +31,7 @@ export default async function PapelesYCartones(){
           <p>&nbsp;&#62;&nbsp;</p>
           <Link href="/items">Productos</Link>
           <p>&nbsp;&#62;&nbsp;</p>
-          <p>Papeles Y Cartones</p>
+          <p>Papeles y cartones</p>
         </article>
       </section>
       <section className={ArticlesStyles.categoriesAndFilersMobile}>
@@ -42,7 +42,7 @@ export default async function PapelesYCartones(){
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
           <div className={ArticlesStyles.linksBorder}>
-            <Link href="#">Acetatos</Link>
+            <Link href="/items/PapelesYCartones/Acetatos">Acetatos</Link>
           </div>
           <FiltersCheckbox />
         </article>

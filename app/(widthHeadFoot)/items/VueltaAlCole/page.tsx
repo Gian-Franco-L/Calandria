@@ -42,16 +42,16 @@ export default async function VueltaAlCole(){
         <article className={ArticlesStyles.categories}>
           <h3>Categorias</h3>
           <div className={ArticlesStyles.linksBorder}>
-            <Link href="#">Mochilas</Link>
-            <Link href="#">- Jardin</Link>
-            <Link href="#">- Primaria</Link>
-            <Link href="#">- Secundaria</Link>
-            <Link href="#">- Moda urbana</Link>
-            <Link href="#">Cartucheras</Link>
-            <Link href="#">Bolsos y luncheras</Link>
-            <Link href="#">Set de jardin personalizado</Link>
-            <Link href="#">Cintas identificadoras para ropa</Link>
-            <Link href="#">Uniforme San Cayetano</Link>
+            <Link href="/items/VueltaAlCole/Mochilas">Mochilas</Link>
+            <Link href="/items/VueltaAlCole/Mochilas/Jardin">- Jardin</Link>
+            <Link href="/items/VueltaAlCole/Mochilas/Primaria">- Primaria</Link>
+            <Link href="/items/VueltaAlCole/Mochilas/Secundaria">- Secundaria</Link>
+            <Link href="/items/VueltaAlCole/Mochilas/ModaUrbana">- Moda urbana</Link>
+            <Link href="/items/VueltaAlCole/Cartucheras">Cartucheras</Link>
+            <Link href="/items/VueltaAlCole/BolsosLuncheras">Bolsos y luncheras</Link>
+            <Link href="/items/VueltaAlCole/JardinPersonalizado">Set de jardin personalizado</Link>
+            <Link href="/items/VueltaAlCole/CintasIdentificadoras">Cintas identificadoras para ropa</Link>
+            <Link href="/items/VueltaAlCole/UniformeSC">Uniforme San Cayetano</Link>
           </div>
           <FiltersCheckbox />
         </article>
